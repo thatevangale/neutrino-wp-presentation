@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/custom.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -16,8 +16,15 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Title</section>
-				<section> <!-- Very brief history of neutrino oscillations -->
+				<section data-background-image="./figures/UQ_presentation_background.svg" data-transition="fade" data-background-transition="zoom">
+					<h1 style="text-transform:uppercase">Effects of wave packet profiles on neutrino oscillations</h1>
+					<h2><u>Evan Gale</u><sup>a</sup>, and Magdalena Zych<sup>a, b</sup></h2>
+					<footer style="font-size: 25px">
+						<sup>a</sup>ARC Centre of Excellence for Engineered Quantum Systems, School of Mathematics and Physics,<br /> The University of Queensland, St Lucia, QLD 4072, Australia<br />
+						<sup>b</sup>Department of Physics, Stockholm University, SE 106 91 Stockholm, Sweden
+					</footer>
+				</section>
+				<section data-transition="zoom-in slide-out"> <!-- Very brief history of neutrino oscillations -->
 					<section>Theoretical proposal</section>
 					<section>Experimental detections</section>
 					<section>2012 Nobel prize</section>
@@ -32,19 +39,47 @@
 				</section>
 				<section> <!-- Wave packet treatments -->
 					<section>Justification for Gaussian wave packets? Can obtain analytic results...</section>
-					<section>Giunti quote</section>
+					<section>
+						<h2>Why a Gaussian?</h2>
+						<blockquote class="r-fit-text">
+							<p class="fragment semi-fade-out" data-fragment-index="1">&ldquo;A gaussian momentum distribution is the most convenient one for the calculation of several integrations &#8230;</p>
+							<p class="fragment semi-fade-in-then-semi-out" data-fragment-index="1">Other distributions which are sharply peaked around an average momentum lead to the same results after their approximation with a gaussian &#8230;</p>
+							<p class="fragment semi-fade-in-then-semi-out">Therefore, the gaussian momentum distributions can be taken as approximations of the real momentum distributions from the beginning.&rdquo; [1]</p>
+						</blockquote>
+						<footer style="font-size: 25px">[1] C. Giunti, JHEP 2002, <b>017</b> (2002).</footer>
+					</section>
 					<section>Problems with this justification--can have non-Gaussian wave packets. Explain different moments of a distribution. Cite Gaussian wave packets paper on what condition is</section>
 					<section>Introduce Lorentzian wave packets (with equation + figure... comparing to Gaussian?) in the context of Mossbauer neutrinos (cite). Explain how cannot be approx by Gaussian</section>
 					<section>Introduce RMU wave packets, give covariant definition + figure. Relate parameters to observables. Why should we consider these wave packets?</section>
 				</section>
+				
 				<section> <!-- RMU wave packets -->
 					<section>To motivate RMU wave packets let us reconsider Gaussian WPs (put RMU WPs faded off to side)</section>
-					<section>Introduce Heisenberg-Robertson uncertainty relation between position and momentum -> Gaussians are minimum uncertainty wave packets</section>
-					<section>Robertson-Schrodinger uncertainty relation -> squeezed Gaussian</section>
+					<section data-auto-animate> <!-- Introduce Heisenberg-Robertson uncertainty relation between position and momentum. Gaussians are minimum uncertainty wave packets -->
+						<h3>Heisenberg-Robertson uncertainty relation</h3>
+						<p>$$\sigma_X \sigma_Y \geq \left| \frac{1}{2i} \left\langle [\hat{X}, \, \hat{Y}] \right\rangle \right|$$</p>
+					</section>
+					<section data-auto-animate> <!-- Introduce Heisenberg-Robertson uncertainty relation between position and momentum. Gaussians are minimum uncertainty wave packets -->
+						<h3>Heisenberg-Robertson uncertainty relation</h3>
+						<p data-id="hup">$$\sigma_x \sigma_p \geq \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right|$$</p>
+					</section>
+					<section data-auto-animate> <!-- Introduce Heisenberg-Robertson uncertainty relation between position and momentum. Gaussians are minimum uncertainty wave packets -->
+						<h3>Heisenberg-Robertson uncertainty relation</h3>
+						<p data-id="hup">$$\sigma_x \sigma_p = \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right|$$</p>
+						<p data-auto-animate-delay="1.5">Gaussian wave packet minimises uncertainty<p>
+						<p data-auto-animate-delay="1.5">$$\psi(p; \bar{p}, \sigma_p) = \mathcal{N} \exp \left[ -\frac{(p - \bar{p})^2}{4 \sigma_p} \right]$$</p>
+					</section>
+					<section data-auto-animate> <!-- Robertson-Schrodinger uncertainty relation -> squeezed Gaussian -->
+						<h3>Heisenberg-Robertson uncertainty relation</h3>
+						<p data-id="hup">$$\sigma_x \sigma_p \geq \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right|$$</p>
+						<p data-auto-animate-delay="1.5">Robertson-Schrödinger uncertainty relation<p>
+						<p data-auto-animate-delay="1.5">$$\sigma_x^2 \sigma_p^2 - \sigma_{x p}^2 \geq \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right|^2$$</p>
+					</section>
 					<section>Introduce relativistic velocity (Newton-Wigner localisation)</section>
 					<section>Position-velocity uncertainty relation, RMU WP as minimum uncertainty WP. cite Al-Hashimi and Wiese + Polish group</section>
 					<section>Show RMU wave packets are Gaussian in non-rel limit but Lorentzian (and hence non-Gaussian) in ultrarel limit</section>
 				</section>
+				
 				<section> <!-- Results & discussion -->
 					<section>Get plots of transition probabilities as a function of... what? (check literature + past talks by Giunti). Compare results of different WPs</section>
 					<section>Discussion of decoherence... RMU wave packets maintain their form while Gaussians spread out</section>
@@ -74,6 +109,9 @@
 				hash: true,
 				controls: false,
 				slideNumber: true,
+				autoAnimateDuration: 1.5,
+				
+				width: 1080,
 				
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealHighlight, RevealMarkdown, RevealSearch, RevealNotes, RevealMath, RevealZoom ]
