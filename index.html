@@ -17,7 +17,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<!-- Title -->
-				<section data-background-image="./figures/UQ_presentation_background.svg" data-transition="fade" data-background-transition="zoom">
+				<section data-background-image="./figures/UQ_presentation_background.svg" data-background-size="contain" data-transition="fade" data-background-transition="zoom">
 					<a href="https://thatevangale.github.io/neutrino-wp-presentation/">
 						<h1 style="text-transform:uppercase;">Effects of wave packet profiles on neutrino oscillations</h1>
 					</a>
@@ -65,14 +65,14 @@
 						<p class="fragment">Flavour basis $\nu_\alpha$ can be related to mass basis $\nu_i$ by</p>
 						<p class="fragment">$$\left| \nu \right\rangle = \sum_i U_{\alpha i}^* \left| \nu_i \right\rangle \, ,$$</p>
 						<p><span class="fragment">where $U_{\alpha i}$ is the mixing matrix,</span> <span class="fragment">and its spacetime evolution is</p>
-						<p class="fragment">$$\left| \nu_\alpha(x, t) \right\rangle = \sum_i U_{\alpha i}^* e^{-i (E_i t - p_i x)} \left| \nu_i \right\rangle \, .$$</p>
+						<p class="fragment">$$\left| \nu_\alpha(t, x) \right\rangle = \sum_i U_{\alpha i}^* e^{-i (E_i t - p_i x)} \left| \nu_i \right\rangle \, .$$</p>
 					</section>
 					<section data-auto-animate>
 						<h2>How are neutrinos described in quantum mechanics?</h2>
 						<p class="fragment">Amplitude at detection is given by</p>
 						<div class="fragment" data-id="eq">
 							\[  \begin{aligned}
-								\mathcal{A}_{\nu_\alpha \to \nu_\beta}(L, T) &= \left \langle \nu_\beta(x_d, t_d) | \nu_\alpha(x_p, t_p) \right\rangle \\[5px]
+								\mathcal{A}_{\nu_\alpha \to \nu_\beta}(T, L) &= \left \langle \nu_\beta(x_d, t_d) | \nu_\alpha(x_p, t_p) \right\rangle \\[5px]
 																			 &= \sum_i U_{\alpha i}^* e^{-i (E_i T - p_i L)} U_{\beta i} \, , \end{aligned}
 							\]
 						</div>
@@ -83,13 +83,13 @@
 						<p style="font-size: 25px; opacity: 0.75;">Amplitude at detection is given by</p>
 						<div style="font-size: 25px; opacity: 0.75;" data-id="eq">
 							\[  \begin{aligned}
-								\mathcal{A}_{\nu_\alpha \to \nu_\beta}(L, T) &= \left \langle \nu_\beta(x_d, t_d) | \nu_\alpha(x_p, t_p) \right\rangle \\[5px]
+								\mathcal{A}_{\nu_\alpha \to \nu_\beta}(T, L) &= \left \langle \nu_\beta(x_d, t_d) | \nu_\alpha(x_p, t_p) \right\rangle \\[5px]
 																			 &= \sum_i U_{\alpha i}^* e^{-i (E_i T - p_i L)} U_{\beta i} \, , \end{aligned}
 							\]
 						</div>
 						<p style="font-size: 25px; opacity: 0.75;">where $T = t_d - t_p$ and $L = x_d - x_p$.</p>
 						<p data-auto-animate-delay="1">Transition probability found by</p>
-						<div data-auto-animate-delay="1.5">$$P_{\nu_\alpha \to \nu_\beta}(L) = \int dT \, \left| \mathcal{A}_{\nu_\alpha \to \nu_\beta}(L, T) \right|^2 \, .$$</div>
+						<div data-auto-animate-delay="1.5">$$P_{\nu_\alpha \to \nu_\beta}(L) = \int dT \, \left| \mathcal{A}_{\nu_\alpha \to \nu_\beta}(T, L) \right|^2 \, .$$</div>
 					</section>
 					<section>
 						<h2>Problems with plane wave treatment</h2>
@@ -121,9 +121,9 @@
 							<li>Quantum mechanics (intermediate wave packet approach)</li>
 							<li style="opacity: 0.5;">Quantum field theory (external wave packet approach)</li>
 						</ul>
-						<p data-auto-animate-delay="1">$$\left| \nu_\alpha(x, t) \right\rangle = \sum_i U_{\alpha i}^* \psi_i(x, t) \left| \nu_i \right\rangle \, ,$$</p>
+						<p data-auto-animate-delay="1">$$\left| \nu_\alpha(t, x) \right\rangle = \sum_i U_{\alpha i}^* \psi_i(t, x) \left| \nu_i \right\rangle \, ,$$</p>
 						<p data-auto-animate-delay="1.5">where</p>
-						<div data-auto-animate-delay="2.5">$$\psi_i(x, t) = \frac{1}{\sqrt{2 \pi}} \int dp_i \, \widetilde{\psi}_i(p_i) e^{-i (E_i t - p_i x)} \, .$$</div>
+						<div data-auto-animate-delay="2.5">$$\psi_i(t, x) = \frac{1}{\sqrt{2 \pi}} \int dp_i \, \widetilde{\psi}_i(p_i) e^{-i (E_i t - p_i x)} \, .$$</div>
 					</section>
 					<section>
 						<h2>How should we formalise the wave packet treatment?</h2>
@@ -198,47 +198,127 @@
 				
 				<!-- RMU wave packets -->
 				<section>
-					<section>To motivate RMU wave packets let us reconsider Gaussian WPs (put RMU WPs faded off to side)</section>
-					<section data-auto-animate> <!-- Introduce Heisenberg-Robertson uncertainty relation between position and momentum. Gaussians are minimum uncertainty wave packets -->
-						<h3>Heisenberg-Robertson uncertainty relation</h3>
-						<p>$$\sigma_X \sigma_Y \geq \left| \frac{1}{2i} \left\langle [\hat{X}, \, \hat{Y}] \right\rangle \right|$$</p>
+					<section data-auto-animate>
+						<h2>Why RMU wave packets?</h2>
+						<p class="fragment" style="font-size: 35px;">Let us reconsider Gaussian wave packets</p>
+						<p class="fragment">$$\psi(p; \bar{p}, \sigma_p) = \mathcal{N} \exp \left[ -\frac{(p - \bar{p})^2}{4 \sigma_p^2} \right] \, .$$</p>
 					</section>
 					<section data-auto-animate> <!-- Introduce Heisenberg-Robertson uncertainty relation between position and momentum. Gaussians are minimum uncertainty wave packets -->
-						<h3>Heisenberg-Robertson uncertainty relation</h3>
-						<p data-id="hup">$$\sigma_x \sigma_p \geq \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right|$$</p>
+						<h2>Why RMU wave packets?</h2>
+						<p style="font-size: 35px;">Let us reconsider Gaussian wave packets</p>
+						<p>$$\psi(p; \bar{p}, \sigma_p) = \mathcal{N} \exp \left[ -\frac{(p - \bar{p})^2}{4 \sigma_p^2} \right] \, .$$</p>
+						<p data-auto-animate-delay="1" style="font-size: 35px;">Gaussian minimises Heisenberg-Robertson uncertainty relation</p>
+						<p data-auto-animate-delay="2.5">$$\sigma_x \sigma_p = \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right| = \frac{\hbar}{2} \, .$$</p>
+						<p data-auto-animate-delay="4.5" style="font-size: 35px;">Assuming that position and momentum are independent</p>
 					</section>
-					<section data-auto-animate> <!-- Introduce Heisenberg-Robertson uncertainty relation between position and momentum. Gaussians are minimum uncertainty wave packets -->
-						<h3>Heisenberg-Robertson uncertainty relation</h3>
-						<p data-id="hup">$$\sigma_x \sigma_p = \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right|$$</p>
-						<p data-auto-animate-delay="1.5">Gaussian wave packet minimises uncertainty<p>
-						<p data-auto-animate-delay="1.5">$$\psi(p; \bar{p}, \sigma_p) = \mathcal{N} \exp \left[ -\frac{(p - \bar{p})^2}{4 \sigma_p} \right]$$</p>
+					<section> <!-- Robertson-Schrodinger uncertainty relation -> squeezed Gaussian -->
+						<h2>Robertson-Schrödinger uncertainty relation</h2>
+						<p class="fragment" style="font-size: 35px;">More generally, can have non-vanishing covariance</p>
+						<p class="fragment">$$\sigma_x^2 \sigma_p^2 - \sigma_{x p}^2 = \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right|^2$$</p>
+						<p class="fragment" style="font-size: 35px;">One obtains squeezed Gaussian wave packets<p>
+						<p class="fragment">$$\psi(p; \bar{x}, \bar{p}, \sigma_p) = \mathcal{N} \exp \left[ -\frac{(p - \bar{p})^2}{4 \sigma_p^2} + i \bar{x} p \right]$$</p>
 					</section>
-					<section data-auto-animate> <!-- Robertson-Schrodinger uncertainty relation -> squeezed Gaussian -->
-						<h3>Heisenberg-Robertson uncertainty relation</h3>
-						<p data-id="hup">$$\sigma_x \sigma_p \geq \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right|$$</p>
-						<p data-auto-animate-delay="1.5">Robertson-Schrödinger uncertainty relation<p>
-						<p data-auto-animate-delay="1.5">$$\sigma_x^2 \sigma_p^2 - \sigma_{x p}^2 \geq \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{p}] \right\rangle \right|^2$$</p>
+					<section data-auto-animate>
+						<h2>What about RMU wave packets?</h2>
+						<p class="fragment">Define relativistic velocity operator</p>
+						<p class="fragment">$$\hat{v} \equiv i [\hat{H}, \hat{x}] = \frac{\hat{p}}{\hat{H}}$$</p>
+						<p class="fragment">Minimise uncertainty between position and <em>velocity</em></p>
+						<p class="fragment">$$\sigma_x^2 \sigma_v^2 - \sigma_{x v}^2 = \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{v}] \right\rangle \right|^2$$</p>
 					</section>
-					<section>Introduce relativistic velocity (Newton-Wigner localisation)</section>
-					<section>Position-velocity uncertainty relation, RMU WP as minimum uncertainty WP. cite Al-Hashimi and Wiese + Polish group</section>
-					<section>Show RMU wave packets are Gaussian in non-rel limit but Lorentzian (and hence non-Gaussian) in ultrarel limit</section>
+					<section data-auto-animate>
+						<h2>What about RMU wave packets?</h2>
+						<p>Minimise uncertainty between position and <em>velocity</em></p>
+						<p>$$\sigma_x^2 \sigma_v^2 - \sigma_{x v}^2 = \left| \frac{1}{2i} \left\langle [\hat{x}, \, \hat{v}] \right\rangle \right|^2$$</p>
+						<p data-auto-animate-delay="1.25" style="font-size: 35px;">Squeezed RMU wave packets! Generalised from Ref. [10]</p>
+						<p data-auto-animate-delay="2.5">$$\tilde\psi(E_p, p; \alpha, \beta) = \mathcal{N} \exp \left[ -\alpha E_p + \beta p \right] \, ,$$</p>
+						<p data-auto-animate-delay="4.5">where $\alpha, \beta$ determined by the moments of velocity and space(time)</p>
+						
+						<footer style="font-size: 25px;">
+							<br />
+							<span data-auto-animate-delay="1.25">
+								[10] M. H. Al-Hashimi and U.-J. Wiese, Ann. Phys. <b>324</b>, 2599 (2009).
+							</span>
+						</footer>
+					</section>
+					<section data-auto-animate>
+						<h2>What about RMU wave packets?</h2>
+						<p>Squeezed RMU wave packets! Generalised from Ref. [10]</p>
+						<p>$$\tilde\psi(E_p, p; \alpha, \beta) = \mathcal{N} \exp \left[ -\alpha E_p + \beta p \right] \, ,$$</p>
+						<p>where $\alpha, \beta$ determined by the moments of velocity and space(time)</p>
+						<p><span class="fragment">Reduce to Gaussians in non-relativistic limit&#8230;</span> <span class="fragment">and to Lorentzians in the ultra-relativistic limit!</span> <span class="fragment">(In configuration space and neglecting mass)</span></p>
+						
+						<footer style="font-size: 25px;">
+							<br />
+							<span>
+								[10] M. H. Al-Hashimi and U.-J. Wiese, Ann. Phys. <b>324</b>, 2599 (2009).
+							</span>
+						</footer>
+					</section>
 				</section>
 				
 				<!-- Results & discussion -->
 				<section data-transition="fade-out" data-background-transition="fade-out">
-					<section>Get plots of transition probabilities as a function of... what? (check literature + past talks by Giunti). Compare results of different WPs</section>
-					<section>Discussion of decoherence... RMU wave packets maintain their form while Gaussians spread out</section>
-					<section>Ask whether different mass RMU wave packets will separate over course of propagation. Equal velocities?</section>
-					<section>Briefly discuss equal-velocity WP controversy. Check whether expectation value is being broken up over v=p/E. Also discuss non-sharply peaked energies and momenta from WPs at production and detection (external WP formalism?) Peak/mean can unity but spread/variance can be very large</section>
+					<section data-auto-animate>
+						<h2>Propagators for different wave packets</h2>
+						<p class="fragment" style="font-size: 25px;">Plane wave: $$\mathcal{A}_{\nu_\alpha \to \nu_\beta}(T, L) = \sum_i U_{\alpha i}^* e^{-i (E_i T - p_i L)} U_{\beta i}$$</p>
+						<p class="fragment" style="font-size: 25px;">Gaussian: $$\mathcal{A}_{\nu_\alpha \to \nu_\beta}(T, L) \sim \sum_i U_{\alpha i}^* \exp \left[ -\frac{(L - \bar{v}_i T)^2}{4 \sigma_x^2} - i (\bar{E}_i T - \bar{p}_i L) \right] U_{\beta i}$$</p>
+						<p class="fragment" style="font-size: 25px;">RMU: $$\mathcal{A}_{\nu_\alpha \to \nu_\beta}(T, L) \sim \sum_i U_{\alpha i}^* \frac{(T - i \alpha) m_i K_1\left( -m_i \sqrt{(T - i \alpha)^2 + (L - i \beta)^2} \right)}{\sqrt{(T - i \alpha)^2 + (L - i \beta)^2}} U_{\beta i}$$</p>
+					</section>
+					<section>
+						<h2>Implications for decoherence</h2>
+						<ol>
+							<li><span class="fragment" data-fragment-index="1">Gaussian wave packets spread over evolution,</span><br /><span class="fragment" data-fragment-index="2">while RMU wave packets maintain their localisation [11]</span></li>
+							<p class="fragment" data-fragment-index="3">In general, $\sigma_x^{(RMU)}(t) \leq \sigma_x^{(G)}(t)$ for all time</p>
+							<li class="fragment" data-fragment-index="4">RMU wave packets follow semi-classical trajectories,<br \>so different mass eigenstates do not separate!</li>
+						</ol>
+						
+						<footer style="font-size: 25px;">
+							<br />
+							<span class="fragment" data-fragment-index="2">
+								[11] C. E. Wood and M. Zych, Phys. Rev. Research <b>3</b>, 013049 (2021).
+							</span>
+						</footer>
+					</section>
+					<section data-auto-animate>
+						<h2>Can neutrinos propagate with equal velocities?</h2>
+						<p class="fragment" data-fragment-index="1">Controversy in early 2000s whether group velocities can be equal [12-14]</p>
+						<p class="fragment" data-fragment-index="2">Consensus is debate settled as &ldquo;no&rdquo; from kinematical arguments</p>
+						<ol>
+							<li class="fragment fade-in-then-semi-out" data-fragment-index="3">If $v_1 = v_2$, then $p_1 / E_1 = p_2 / E_2$ and $p_1 / p_2 = E_1 / E_2$</li>
+							<li class="fragment fade-in-then-semi-out" data-fragment-index="4">Since $E_i = \gamma m_i$, then $p_1 / p_2 = E_1 / E_2 = m_1 / m_2$</li>
+							<li class="fragment fade-in-then-semi-out" data-fragment-index="5">$E_1 / E_2 \simeq 1$ in ultra-relativistic regime, not generally true for $m_1 / m_2$</li>
+						</ol>
+						
+						<footer style="font-size: 25px;">
+							<br />
+							<span class="fragment" data-fragment-index="1">
+								[12] Y. Takeuchi, Y. Tazaki, S. Y. Tsai, and T. Yamazaki, Mod. Phys. Lett. A <b>14</b>, 2329 (1999).<br />
+								[13] S. De Leo, G. Ducat, and P. Rotelli, Mod. Phys. Lett. A <b>15</b>, 2057 (2000).<br />
+								[14] L. B. Okun and I. S. Tsukerman, Mod. Phys. Lett. A <b>15</b>, 1481 (2000).
+							</span>
+							
+						</footer>
+					</section>
+					<section data-auto-animate>
+						<h2>Can neutrinos propagate with equal velocities?</h2>
+						<p class="fragment">Let's be more careful!</p>
+						<p class="fragment">Should one take $\bar{v} = \langle p \rangle / \langle E \rangle$?</p>
+						<p class="fragment">In general, one has $\bar{v} = \langle \partial_p E \rangle \neq \langle p \rangle / \langle E \rangle$!</p>
+						<p>
+							<span class="fragment">RMU wave packets have $\bar{v} = \langle \partial_p E \rangle = \mathrm{Re}(\beta) / \mathrm{Re}(\alpha)$, while</span>
+							<span class="fragment"> $$\frac{\langle p \rangle}{\langle E \rangle} = \frac{\mathrm{Re}(\beta)}{\mathrm{Re}(\alpha)} \left( \frac{1}{1 - \chi_{m, \mathrm{Re}(\alpha), \mathrm{Re}(\beta)}} \right) \, .$$</span>
+						</p>
+						<p class="fragment">Only agrees in semi-classical regime, for $\sigma_x \gg \lambda_c \equiv 1/m$</p>
+					</section>
 				</section>
 				
 				<!-- Conclusion & summary -->
-				<section data-background-image="./figures/UQ_presentation_background.svg" data-transition="fade-in" data-background-transition="fade-in">
+				<section data-background-image="./figures/UQ_presentation_background.svg" data-background-size="contain" data-transition="fade-in" data-background-transition="fade-in">
 					<h1>Summary</h1>
 					<ul>
-						<li>Neutrinos wave packets can have non-Gaussian character</li>
-						<li>Possible effects on oscillations and coherence length</li>
-						<li>RMU wave packets can preclude or mitigate decoherence</li>
+						<li>Neutrino wave packets could have a non-Gaussian profile</li>
+						<li>If described by RMU wave packets, then neutrinos are highly localised, and decoherence is heavily suppressed</li>
+						<li>Propagation at equal velocities should be taken seriously,<br /> and could be experimentally tested</li>
 					</ul>
 					<footer><br />Evan Gale,<br /> e.gale@uq.edu.au</footer>
 				</section>
