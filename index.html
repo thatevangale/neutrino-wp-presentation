@@ -12,6 +12,15 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		
+		<style>
+		.container{
+			display: flex;
+		}
+		.col{
+			flex: 1;
+		}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
@@ -19,7 +28,7 @@
 				<!-- Title -->
 				<section data-background-gradient="linear-gradient(to bottom, #51247A, #1A1A1A)" data-transition="fade" data-background-transition="zoom">
 					<a href="https://thatevangale.github.io/neutrino-wp-presentation/">
-						<h1 style="text-transform:uppercase;">Localisation problem in Unruh-DeWitt detectors with quantised centre of mass </h1>
+						<h1 style="text-transform:uppercase;">Localisation problem in Unruh-DeWitt detectors with quantised centre of mass</h1>
 					</a>
 					<h2><u>Evan Gale</u><sup>a</sup>, and Magdalena Zych<sup>a, b</sup></h2>
 					<footer style="font-size: 25px;">
@@ -39,7 +48,7 @@
 				
 				<!-- preface -->
 				<section>
-					<h1>Relativistic Quantum Physics</h1>
+					<h1>Relativistic quantum physics</h1>
 					<ul>
 						<li>1900s: Einsteinian revolution&mdash;special relativity and quantum mechanics</li>
 						&nbsp;
@@ -57,8 +66,8 @@
 				<!-- UDW model -->
 				<section>
 					<!-- traditional model -->
-					<section>
-						<h1>Unruh-DeWitt (UDW) Detector Model</h1>
+					<section data-auto-animate>
+						<h1>Unruh-DeWitt (UDW) detector model</h1>
 						<p>Originally proposed by Unruh [1], then simplified by DeWitt [2].</p>
 						<p>Couples a two-level system to a quantised scalar field $\hat{\phi}(\vec{x})$</p>
 							\[
@@ -68,15 +77,17 @@
 							\[
 								\hat{\mu} = | g \rangle \langle e | + | e \rangle \langle g |
 							\]
-						<footer style="font-size: 25px;">
-							[1] W. G. Unruh, Phys. Rev. D 14, 870 (1976).
+							
+						<footer data-id="ref" style="font-size: 25px;">
+							[1] W. G. Unruh, Phys. Rev. D <b>14</b>, 870 (1976).
 							<br />
 							[2] B. DeWitt, in General Relativity: An Einstein Centenary Survey (University Press, UK, 1979).
 						</footer>
+						
 					</section>
 					
-					<section>
-						<h1>Unruh-DeWitt (UDW) Detector Model</h1>
+					<section data-auto-animate>
+						<h1>Unruh-DeWitt (UDW) detector model</h1>
 						<p>Originally proposed by Unruh [1], then simplified by DeWitt [2].</p>
 						<p>Couples a two-level system to a quantised scalar field $\hat{\phi}(\vec{x})$</p>
 							\[
@@ -86,15 +97,17 @@
 							\[
 								\hat{\phi}(\vec{x}) = \frac{1}{(2\pi)^{3/2}} \int \frac{d^3k}{\sqrt{2 \omega(\vec{k})}} \Big ( \hat{a}(\vec{k}) e^{-i \vec{k} \cdot \vec{x}} + \mathrm{H.c.} \Big )
 							\]
-						<footer style="font-size: 25px;">
+							
+						<footer data-id="ref" style="font-size: 25px;">
 							[1] W. G. Unruh, Phys. Rev. D <b>14</b>, 870 (1976).
 							<br />
 							[2] B. DeWitt, in General Relativity: An Einstein Centenary Survey (University Press, UK, 1979).
 						</footer>
+						
 					</section>
 					
 					<section>
-						<h1>Unruh-DeWitt (UDW) Detector Model</h1>
+						<h1>Unruh-DeWitt (UDW) detector model</h1>
 						<p>Has many applications, which includes:</p>
 						<ul>
 							<li>Quantum field theory, particularly in curved spacetime</li>
@@ -109,8 +122,8 @@
 				<!-- extensions with c.m. -->
 				<section>
 					<!-- non-relativistic extensions -->
-					<section>
-						<h1>Detectors with Quantised Centre of Mass</h1>
+					<section data-auto-animate>
+						<h1>Detectors with quantised centre of mass</h1>
 						<p>Considered by Unruh and Wald for a box detector [3]</p>
 							\[
 								\hat{H}_I = \lambda \int d^3x \, \hat{\mu}(\vec{x}) \otimes \hat{\phi}(\vec{x})
@@ -124,18 +137,22 @@
 						</footer>
 					</section>
 					
-					<section>
-						<h1>Detectors with Quantised Centre of Mass</h1>
-						<p>Alternative extension considered by Stritzelberger and Kempf [4]</p>
+					<section data-auto-animate>
+						<h1>Detectors with quantised centre of mass</h1>
+						<p data-auto-animate-delay="1">Alternative extension considered by Stritzelberger and Kempf [4]</p>
+						<div data-auto-animate-delay="1">
 							\[
 								\hat{H}_I = \lambda \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D \otimes \hat{\phi}(\vec{x})
 							\]
-						<p>Detector's free Hamiltonian now includes a kinetic term</p>
+						</div>
+						<p data-auto-animate-delay="1">Detector's free Hamiltonian now includes a kinetic term</p>
+						<div data-auto-animate-delay="1">
 							\[
 								\hat{H}_D = \frac{\hat{\vec{p}}^2}{2 M} + E | e \rangle \langle e |
 							\]
-						<p>Also treated by Wilkens [5] in context of atom-light interaction</p>
-						<footer style="font-size: 25px;"><br />
+						</div>
+						<p data-auto-animate-delay="1">Also treated by Wilkens [5] in context of atom-light interaction</p>
+						<footer data-auto-animate-delay="1" style="font-size: 25px;"><br />
 							[4] N. Stritzelberger and A. Kempf, Phys. Rev. D <b>101</b>, 036007 (2020).
 							<br />
 							[5] M. Wilkens, Phys. Rev. A <b>47</b>, 671 (1993).
@@ -144,7 +161,7 @@
 					
 					<!-- relativistic centre of mass? -->
 					<section>
-						<h1>Relativistic Centre of Mass?</h1>
+						<h1>Relativistic centre of mass?</h1>
 						<p>Problem: both extensions assume a non-relativistic detector!</p>
 						<br />
 						<p>Can introduce relativistic centre of mass in two different ways:</p>
@@ -158,8 +175,8 @@
 					</section>
 					
 					<!-- second-quantised model -->
-					<section>
-						<h1>Relativistic Second-Quantised Detector</h1>
+					<section data-auto-animate>
+						<h1>Relativistic second-quantised detector</h1>
 						<p>Relativistic second-quantised detector model proposed by Unruh [1]</p>
 						<ul>
 							<li>Replace energy levels of detector by fields $| j \rangle \to \hat{\psi}_j$</li>
@@ -174,8 +191,8 @@
 						</ul>
 					</section>
 					
-					<section>
-						<h1>Relativistic Second-Quantised Detector</h1>
+					<section data-auto-animate>
+						<h1>Relativistic second-quantised detector</h1>
 						<p>Giacomini and Kempf [6] simplified by restricting to one-particle sector</p>
 						<ul>
 							<li>Interaction couples position and internal degrees of freedom</li>
@@ -194,9 +211,9 @@
 					</section>
 					
 					<!-- caveats -->
-					<section>
-						<h1>Some Caveats</h1>
-						<p>Two detectors $\hat{\psi}_g$ and $\hat{\psi}_e$?</p>
+					<section data-auto-animate>
+						<h1>Some caveats</h1>
+						<p>Q. Two detectors: $\hat{\psi}_g$ and $\hat{\psi}_e$?</p>
 						<ul>
 							<li>Detector Hilbert space given by $\mathcal{H}^D = \mathcal{H}_{g} \otimes \mathcal{H}_{e}$</li>
 							&nbsp;
@@ -206,9 +223,9 @@
 						</ul>
 					</section>
 					
-					<section>
-						<h1>Some Caveats</h1>
-						<p>Detector does not remain localised&mdash;no confining potential!</p>
+					<section data-auto-animate>
+						<h1>Some caveats</h1>
+						<p>Q. Does detector does not remain localised? A. No. No confining potential!</p>
 						<ul>
 							<li>Detector spreads out, 'delocalises' or 'decoheres'</li>
 							&nbsp;
@@ -216,14 +233,14 @@
 							&nbsp;
 							<li>Can in principle synthesise models&mdash;localised detector with relativistic centre of mass</li>
 						</ul>
-						<footer style="font-size: 25px;"><br />
+						<footer style="font-size: 25px;"><br /><br />
 							[7] T. R. Perche, J. Polo-Gómez, B. de S. L. Torres, and E. Martín-Martínez, arXiv:2308.11698.
 						</footer>
 					</section>
 					
 					<!-- first-quantised model -->
-					<section>
-						<h1>A Relativistic First-Quantised Model?</h1>
+					<section data-auto-animate>
+						<h1>A relativistic first-quantised model?</h1>
 						<p>Quantise the detector in a boosted frame with momentum $\vec{p}$</p>
 							\[
 								\hat{H}_D = \sqrt{\hat{\vec{p}}^2 + \hat{M}^2} \, .
@@ -238,37 +255,43 @@
 							\]
 					</section>
 					
-					<section>
-						<h1>A Relativistic First-Quantised Model?</h1>
+					<section data-auto-animate>
+						<h1>A relativistic first-quantised model?</h1>
 						<p>Interaction Hamiltonian should have the form</p>
-							\[
-								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D^{(\mathrm{1st})} \otimes \hat{\phi}(\vec{x})
-							\]
-						<p>This Hamiltonian coincides with the non-relativistic expression</p>
-					</section>
-					
-					<section>
-						<h1>A Relativistic First-Quantised Model?</h1>
-						<p>Interaction Hamiltonian should have the form</p>
+						<div data-id="hamiltonian">
 							\[
 								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D^{(\mathrm{1st})} \otimes \hat{\phi}(\vec{x}) \, .
 							\]
-						<p>But we have to be a little careful!</p>
-						<ul>
+						</div>
+						<p>This Hamiltonian coincides with the non-relativistic expression</p>
+					</section>
+					
+					<section data-auto-animate>
+						<h1>A relativistic first-quantised model?</h1>
+						<p>Interaction Hamiltonian should have the form</p>
+						<div data-id="hamiltonian">
+							\[
+								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D^{(\mathrm{1st})} \otimes \hat{\phi}(\vec{x}) \, .
+							\]
+						</div>
+						<p data-auto-animate-delay="1">But we have to be a little careful!</p>
+						<ul data-auto-animate-delay="2">
 							<p>Q. What time parameter does the Hamiltonian generate time translations for? [8]</p>
 							<p>A. Inertial detector. Generate time translations wrt coordinate time $t$</p>
 						</ul>
-						<footer style="font-size: 25px;"><br />
+						<footer data-auto-animate-delay="2" style="font-size: 25px;"><br />
 							[8] E. Martín-Martínez and P. Rodriguez-Lopez, Phys. Rev. D <b>97</b>, 105026 (2018).
 						</footer>
 					</section>
 					
-					<section>
-						<h1>A Relativistic First-Quantised Model?</h1>
+					<section data-auto-animate>
+						<h1>A relativistic first-quantised model?</h1>
 						<p>Interaction Hamiltonian should have the form</p>
+						<div data-id="hamiltonian">
 							\[
 								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D^{(\mathrm{1st})} \otimes \hat{\phi}(\vec{x}) \, .
 							\]
+						</div>
 						<p>But we have to be a little careful!</p>
 						<ul>
 							<p>Q. How do we define the position states $| \vec{x} \rangle_D^{(\mathrm{1st})}$?</p>
@@ -279,12 +302,14 @@
 						</ul>
 					</section>
 					
-					<section>
-						<h1>A Relativistic First-Quantised Model?</h1>
+					<section data-auto-animate>
+						<h1>A relativistic first-quantised model?</h1>
 						<p>Interaction Hamiltonian should have the form</p>
+						<div data-id="hamiltonian">
 							\[
 								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D^{(\mathrm{1st})} \otimes \hat{\phi}(\vec{x}) \, .
 							\]
+						</div>
 						<p>But we have to be a little careful!</p>
 						<ul>
 							<p>Q. How are the coupling constants between models related?</p>
@@ -298,24 +323,38 @@
 					<!-- summary -->
 					<section>
 						<h1>Summary</h1>
-						<p>First-quantised model</p>
-						\[
-							\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \Big( | \vec{x}_g \rangle \langle \vec{x}_e |_D^{(\mathrm{1st})} + | \vec{x}_e \rangle \langle \vec{x}_g |_D^{(\mathrm{1st})} \Big) \otimes \hat{\phi}(\vec{x}) \, .
-						\]
-						<p>Second-quantised model</p>
-						\[
-							\hat{H}_I^{(\mathrm{2nd})} \Big |_{\mathcal{H}^D_1} = \lambda^{(\mathrm{2nd})} \int d^3x \, \Big( | \vec{x}_g \rangle \langle \vec{x}_e |_D^{(\mathrm{2nd})} + | \vec{x}_e \rangle \langle \vec{x}_g |_D^{(\mathrm{2nd})} \Big) \otimes \hat{\phi}(\vec{x}) \, .
-						\]
-						<p>Different localisations are given by</p>
-						\[
-							\hspace{-4em} | \vec{x}_j \rangle_D^{(\mathrm{1st})} \equiv \frac{1}{(2\pi)^{3/2}} \int d^3p \, e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, , \quad | \vec{x}_j \rangle_D^{(\mathrm{2nd})} \equiv \frac{1}{(2\pi)^{3/2}} \int \frac{d^3p}{\sqrt{2 E_j(\vec{p})}} e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, .
-						\]
+						<p class="fragment" data-fragment-index="1">First-quantised model</p>
+						<div class="fragment" data-fragment-index="1">
+							\[
+								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \Big( | \vec{x}_g \rangle \langle \vec{x}_e |_D^{(\mathrm{1st})} + | \vec{x}_e \rangle \langle \vec{x}_g |_D^{(\mathrm{1st})} \Big) \otimes \hat{\phi}(\vec{x}) \, .
+							\]
+						</div>
+						<p class="fragment" data-fragment-index="2">Second-quantised model</p>
+						<div class="fragment" data-fragment-index="2">
+							\[
+								\hat{H}_I^{(\mathrm{2nd})} \Big |_{\mathcal{H}^D_1} = \lambda^{(\mathrm{2nd})} \int d^3x \, \Big( | \vec{x}_g \rangle \langle \vec{x}_e |_D^{(\mathrm{2nd})} + | \vec{x}_e \rangle \langle \vec{x}_g |_D^{(\mathrm{2nd})} \Big) \otimes \hat{\phi}(\vec{x}) \, .
+							\]
+						</div>
+						<p class="fragment" data-fragment-index="1">Different localisations are given by</p>
+						<div class="container">
+							<div class="fragment" data-fragment-index="1">
+							\[
+								\hspace{-5em} | \vec{x}_j \rangle_D^{(\mathrm{1st})} \equiv \frac{1}{(2\pi)^{3/2}} \int d^3p \, e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, ,
+							\]
+							</div>
+
+							<div class="fragment" data-fragment-index="2">
+							\[
+								\hspace{2em} | \vec{x}_j \rangle_D^{(\mathrm{2nd})} \equiv \frac{1}{(2\pi)^{3/2}} \int \frac{d^3p}{\sqrt{2 E_j(\vec{p})}} e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, .
+							\]
+							</div>
+						</div>
 					</section>
 				</section>
 				
 				<!-- results of UDW model -->
 				<section>
-					<section>
+					<section data-auto-animate>
 						<h1>Transition rate for spontaneous emission</h1>
 						<ul>
 							<li>We idealise the atom-light interaction, finding transition from</li>
@@ -334,7 +373,7 @@
 						</ul>
 					</section>
 					
-					<section>
+					<section data-auto-animate>
 						<h1>Transition rate for spontaneous emission</h1>
 						<p>Transition amplitude and probability found from</p>
 						\[
@@ -342,28 +381,22 @@
 							P_{| \vec{p}_i, e, 0 \rangle \to | g \rangle} = \int d^3k \int d^3p_f \, \left| \mathcal{A}_{| \vec{p}_i, e, 0 \rangle \to | \vec{p}_f, g, 1_{\vec{k}} \rangle} \right|^2 \, .
 						\]
 						<p>Transition rate given as a functional of the detector wave function (probability density function), convolved with a 'template function'</p>
-						\[
-							\dot{P}[\psi_i] = \frac{\lambda^2}{2 \pi} \int d^3p \, |\psi_i(\vec{p}; \vec{p}_0)|^2 \, \mathcal{T}_{\mathrm{rel}}(\vec{p}) \, .
-						\]
+						<div data-id="template">
+							\[
+								\dot{P}[\psi_i] = \frac{\lambda^2}{2 \pi} \int d^3p \, |\psi_i(\vec{p}; \vec{p}_0)|^2 \, \mathcal{T}_{\mathrm{rel}}(\vec{p}) \, .
+							\]
+						</div>
 					</section>
 					
-					<section>
+					<section data-auto-animate>
 						<h1>Transition rate for spontaneous emission</h1>
 						<p>Transition rate given as a functional of the detector wave function (probability density function), convolved with a 'template function'</p>
-						\[
-							\dot{P}[\psi_i] = \frac{\lambda^2}{2 \pi} \int d^3p \, |\psi_i(\vec{p}; \vec{p}_0)|^2 \, \mathcal{T}_{\mathrm{rel}}(\vec{p}) \, .
-						\]
-						
-						<style>
-						.container{
-							display: flex;
-						}
-						.col{
-							flex: 1;
-						}
-						</style>
-
-						<div class="container">
+						<div data-id="template">
+							\[
+								\dot{P}[\psi_i] = \frac{\lambda^2}{2 \pi} \int d^3p \, |\psi_i(\vec{p}; \vec{p}_0)|^2 \, \mathcal{T}_{\mathrm{rel}}(\vec{p}) \, .
+							\]
+						</div>
+						<div class="container" data-auto-animate-delay="1">
 							<div class="col">
 							First-quantised model
 							\[
@@ -381,32 +414,32 @@
 					</section>
 					
 					<!-- template function -->
-					<section>
+					<section data-auto-animate>
 						<h1>Template functions for different localisations</h1>
 						<img data-src="./figures/udw-localisation/template_comparison_vac_E0001.svg" style="width:100%">
-						<footer style="font-size: 25px;">$E/m = 0.001$</footer>
+						<footer data-id="energy" style="font-size: 25px;">$E/m = 0.001$</footer>
 						<br />
-						<footer style="font-size: 25px;">where $m$ is the rest mass, i.e. $M_g \equiv m$ and $M_e \equiv m + E$.</footer>
+						<footer data-id="comment" style="font-size: 25px;">where $m$ is the rest mass, i.e. $M_g \equiv m$ and $M_e \equiv m + E$.</footer>
 					</section>
 					
-					<section>
+					<section data-auto-animate>
 						<h1>Template functions for different localisations</h1>
 						<img data-src="./figures/udw-localisation/template_comparison_vac_E0001_w-nonrel.svg" style="width:100%">
-						<footer style="font-size: 25px;">$E/m = 0.001$</footer>
+						<footer data-id="energy" style="font-size: 25px;">$E/m = 0.001$</footer>
 						<br />
-						<footer style="font-size: 25px;">where $m$ is the rest mass, i.e. $M_g \equiv m$ and $M_e \equiv m + E$.</footer>
+						<footer data-id="comment" style="font-size: 25px;">where $m$ is the rest mass, i.e. $M_g \equiv m$ and $M_e \equiv m + E$.</footer>
 					</section>
 					
-					<section>
+					<section data-auto-animate>
 						<h1>Template functions for different localisations</h1>
 						<img data-src="./figures/udw-localisation/template_comparison_vac_E10_w-nonrel.svg" style="width:100%">
-						<footer style="font-size: 25px;">$E/m = 10$</footer>
+						<footer data-id="energy" style="font-size: 25px;">$E/m = 10$</footer>
 						<br />
-						<footer style="font-size: 25px;">where $m$ is the rest mass, i.e. $M_g \equiv m$ and $M_e \equiv m + E$.</footer>
+						<footer data-id="comment" style="font-size: 25px;">where $m$ is the rest mass, i.e. $M_g \equiv m$ and $M_e \equiv m + E$.</footer>
 					</section>
 					
 					<!-- transition rate -->
-					<section>
+					<section data-auto-animate>
 						<h1>Transition rate for detector at rest</h1>
 						<p>Assume detector has Gaussian profile</p>
 						\[
@@ -419,32 +452,33 @@
 						\]
 					</section>
 					
-					<section>
-						<h1>Transition rate for different localisations</h1>
+					<section data-auto-animate>
+						<h1>Transition rate for detector at rest</h1>
 						<img data-src="./figures/udw-localisation/transrate_comparison_vac_L10.svg" style="width:90%">
-						<footer style="font-size: 25px;">$L/\lambda_c = 10$</footer>
+						<footer data-id="width" style="font-size: 25px;">$L/\lambda_c = 10$</footer>
 						<br />
-						<footer style="font-size: 25px;">where $\lambda_c \equiv m^{-1}$ is the Compton wavelength of the detector.</footer>
+						<footer data-id="comment" style="font-size: 25px;">where $\lambda_c \equiv m^{-1}$ is the Compton wavelength of the detector.</footer>
 					</section>
 					
-					<section>
-						<h1>Transition rate for different localisations</h1>
+					<section data-auto-animate>
+						<h1>Transition rate for detector at rest</h1>
 						<img data-src="./figures/udw-localisation/transrate_comparison_vac_L01.svg" style="width:90%">
-						<footer style="font-size: 25px;">$L/\lambda_c = 0.1$</footer>
+						<footer data-id="width" style="font-size: 25px;">$L/\lambda_c = 0.1$</footer>
 						<br />
-						<footer style="font-size: 25px;">where $\lambda_c \equiv m^{-1}$ is the Compton wavelength of the detector.</footer>
+						<footer data-id="comment" style="font-size: 25px;">where $\lambda_c \equiv m^{-1}$ is the Compton wavelength of the detector.</footer>
 					</section>
 					
+					<!-- outlook -->
 					<section>
 						<h1>Outlook of results</h1>
 						<ul>
-							<li>Unfortunately, unable to obtain results for arbitrary momentum</li>
+							<li class="fragment" data-fragment-index="1">Unfortunately, unable to obtain results for arbitrary momentum</li>
 							&nbsp;
-							<li>For high momenta, results distinguishable from template function</li>
+							<li class="fragment" data-fragment-index="2">For high momenta, results distinguishable from template function</li>
 							&nbsp;
-							<img data-src="./figures/udw-localisation/template_comparison_vac_E0001.svg" style="width:70%; display:block; margin:auto">
+							<img class="fragment" data-fragment-index="2" data-src="./figures/udw-localisation/template_comparison_vac_E0001.svg" style="width:70%; display:block; margin:auto">
 							&nbsp;
-							<li>Q. What would one observe if this experiment were performed?</li>
+							<li class="fragment" data-fragment-index="3">Q. What would one observe if this experiment were performed?</li>
 						</ul>
 					</section>
 				</section>
@@ -456,6 +490,11 @@
 						<p>What's going on? How should we interpret these results?</p>
 						<p>Can we just take a relativistic position operator which coincides with the non-relativistic position operator?</p>
 						<p>How do we define a relativistic centre of mass?</p>
+					</section>
+					
+					<section>
+						<h1>Centre of mass</h1>
+						<p>Newtonian centre of mass</p>
 					</section>
 					
 					<section>
