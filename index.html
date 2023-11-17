@@ -486,73 +486,195 @@
 				<!-- localisation issue background -->
 				<section>
 					<section>
-						<h1>Localisation</h1>
-						<p>What's going on? How should we interpret these results?</p>
-						<p>Can we just take a relativistic position operator which coincides with the non-relativistic position operator?</p>
-						<p>How do we define a relativistic centre of mass?</p>
+						<h1>How should we interpret these results?</h1>
+						<ul>
+							<li class="fragment" data-fragment-index="1">Can we define a relativistic position operator as equivalent to the non-relativistic position operator?</li>
+							&nbsp;
+							<li class="fragment" data-fragment-index="2">For that matter, how does one define a relativistic centre of mass?</li>
+						</ul>
 					</section>
 					
 					<section>
-						<h1>Centre of mass</h1>
-						<p>Newtonian centre of mass</p>
+						<h1>Non-relativistic centre of mass (c.m.)</h1>
+						<p>Uniquely defined as the weighted average of the position vectors</p>
+						<div>
+							\[
+								\vec{x}_{\text{c.m.}} = \frac{1}{M} \sum_i m_i \vec{x}_i \, , \text{ where } M = \sum_i m_i \, .
+							\]
+						</div>
+						<p>Things become more complicated when our system is relativistic</p>
+					</section>
+					
+					<style>
+						ol.alphaList {list-style-type: lower-alpha;} 
+					</style>
+					
+					<section data-auto-animate>
+						<h1>Relativistic centre of mass (c.m.)</h1>
+						<p class="fragment"  data-fragment-index="1">First* investigated by Pryce [9]</p>
+						<p class="fragment">Proposed six possible definitions (a)-(f) of a relativistic centre of mass:</p>
+						
+						<ol class="alphaList">
+							<li class="fragment">In a Galilean frame, weight by rest masses.</li>
+							<li class="fragment">As above, but in rest frame, then transform by Lorentz group.</li>
+							<li class="fragment">Define wrt particular frame, weight by dynamical mass-energies.</li>
+							<li class="fragment">As above, but in rest frame, then transform by Lorentz group.</li>
+							<li class="fragment">Defined wrt coordinates with vanishing Poisson brackets.</li>
+							<li class="fragment">Trying to synthesise definitions (a) and (b).</li>
+						</ol>
+						
+						<footer data-id="ref" class="fragment" data-fragment-index="1" style="font-size: 25px;"><br />
+							[9] M. H. L. Pryce, Proc. R. Soc. A <b>195</b>, 62 (1948).
+						</footer>
+					</section>
+					
+					<section data-auto-animate>
+						<h1>Relativistic centre of mass (c.m.)</h1>
+						<p>First* investigated by Pryce [9]</p>
+						<p>Proposed six possible definitions (a)-(f) of a relativistic centre of mass:</p>
+						
+						<ol class="alphaList">
+							<li style="opacity: 0.25;">In a Galilean frame, weight by rest masses.</li>
+							<li style="opacity: 0.25;">As above, but in rest frame, then transform by Lorentz group.</li>
+							<li style="opacity: 0.5;">Define wrt particular frame, weight by dynamical mass-energies.</li>
+							<li>As above, but in rest frame, then transform by Lorentz group.</li>
+							<li>Defined wrt coordinates with vanishing Poisson brackets.</li>
+							<li style="opacity: 0.25;">Trying to synthesise definitions (a) and (b).</li>
+						</ol>
+						
+						<footer data-id="ref" style="font-size: 25px;"><br />
+							[9] M. H. L. Pryce, Proc. R. Soc. A <b>195</b>, 62 (1948).
+						</footer>
 					</section>
 					
 					<section>
-						<h1>Localisation</h1>
-						<p>Pryce's six definitions of a relativistic centre of mass. Highlight (d) and (e)</p>
+						<h1>Localisation in RQM I</h1>
+						<p class="fragment" data-fragment-index="1">Newton and Wigner [10] defined a relativistic position operator<br /> by requiring it satisfy a set of invariance conditions</p>
+						
+						<ol class="alphaList">
+							<li class="fragment" data-fragment-index="2">Superposition of localised systems is also localised.</li>
+							<li class="fragment" data-fragment-index="3">Invariant wrt spatial rotations and reflections.</li>
+							<li class="fragment" data-fragment-index="4">Localised states are orthogonal wrt translated states.</li>
+							<li class="fragment" data-fragment-index="5">Generators of Lorentz group applicable to the localised states.</li>
+							&nbsp;
+						</ol>
+						
+						<ul>
+							<li class="fragment" data-fragment-index="6">Equivalent to Pryce's definition (e)&mdash;vanishing commutator</li>
+							<li class="fragment" data-fragment-index="7">Coincides with the non-relativistic position operator [11]</li>
+						</ul>
+						
+						<footer data-id="ref" style="font-size: 25px;"><br />
+							<span  class="fragment" data-fragment-index="1">[10] T. D. Newton and E. P. Wigner, Rev. Mod. Phys. <b>21</b>, 400 (1949).</span>
+							<br />
+							<span  class="fragment" data-fragment-index="7">[11] R. Fong and E. G. P. Rowe, Ann. Phys. <b>46</b>, 559 (1968).</span>
+						</footer>
 					</section>
 					
 					<section>
-						<h1>Localisation</h1>
-						<p>Newton and Wigner's definition of a relativistic position operator. Invariance conditions. Coincides with Pryce (d?)</p>
-						<p>Operator they introduce coincides with the non-relativistic position operator (Fong and Rowe)</p>
-					</section>
-					
-					<section>
-						<h1>Localisation</h1>
-						<p>Philips' Lorentz covariant localisation. Invariance conditions. Coincides with Pryce (e?)</p>
-						<p>Equivalent to action of field operator on vacuum. Corresponds to the second-quantised position operator we have obtained</p>
+						<h1>Localisation in RQM II</h1>
+						<p>Philips [12] defined a Lorentz-invariant position operator</p>
+						<ol class="alphaList">
+							<li class="fragment" data-fragment-index="2">Superposition of localised systems is also localised.</li>
+							<li class="fragment" data-fragment-index="3">Invariant wrt spatial rotations and reflections.</li>
+							<li class="fragment" data-fragment-index="4">Localised states are invariant wrt Lorentz boosts.</li>
+							<li class="fragment" data-fragment-index="5">The localised states are normalisable.</li>
+							<li class="fragment" data-fragment-index="6">No subset of the set of localised states satisfies the above conditions.</li>
+							&nbsp;
+						</ol>
+						
+						<ul>
+							<li class="fragment" data-fragment-index="7">Equivalent to Pryce's definition (d)&mdash;Lorentz invariant localisation</li>
+							<li class="fragment" data-fragment-index="8">In second-quantised formalism,
+							Philips' position state is equivalent to the action of field operator on vacuum $| \vec{x}_p \rangle \equiv \hat{\psi}(\vec{x}) | 0 \rangle$</li>
+						</ul>
+						
+						<footer class="fragment" data-fragment-index="1" data-id="ref" style="font-size: 25px;"><br />
+							[12] T. O. Philips, Phys. Rev. <b>136</b>, B893 (1964).
+						</footer>
 					</section>
 				</section>
 				
 				<!-- Relevance of FW transformation and discussion -->
 				<section>
-					<section>
-						<h1>Two Sides to Relativistic Localisation</h1>
-						<p>Have two representations for each localisation. Can map between them [foldy and wouthuysen]</p>
-						<p>There is the 'canonical' or 'Newton-Wigner' representation and the 'hyperbolic' representation</p>
-						<p>Operators coincide with sensible definition in NW representation, but not in the hyperbolic representation</p>
-						<p>Have a Hermitian position operator in NW rep., but non-Hermitian for hyperbolic (Philips' state)</p>
-						<p>One expects the second-quantised model, which is more fundamental, to be correct and its predictions observed.
-						However, we do not have a Hermitian position operator in this case, and associated operators (e.g. velocity) do not behave as expected.
-						Perhaps, in measuring the position eigenstates, one must necessarily work within the NW representation?
-						One can interpret this as a course-graining of the detector's degrees of freedom.
-						However, one can still ask whether this is merely an effective description, or whether there is something more fundamental occurring between the two representations.</p>
+					<section data-auto-animate>
+						<h1>Two sides to relativistic localisation</h1>
+						<p>Q. How are these two localisations related?</p>
+						<p>A. One can map between these two different localisations, and associated representations, via the Foldy-Wouthuysen transformation [13-15]</p>
+						
+						<footer data-id="ref" style="font-size: 25px;"><br />
+							[13] L. L. Foldy and S. A. Wouthuysen, Phys. Rev. <b>78</b>, 29 (1950).
+							<br />
+							[14] L. L. Foldy, Phys. Rev. <b>102</b>, 568 (1956).
+							<br />
+							[15] J. P. Costella and B. H. J. McKellar, Am. J. Phys. <b>63</b>, 1119 (1995).
+						</footer>
+					</section>
+				
+					<section data-auto-animate>
+						<h1>Two sides to relativistic localisation</h1>
+
+						<p class="fragment" data-fragment-index="1">Q. How should we interpret the results of these two localisations?</p>
+						<p class="fragment" data-fragment-index="2">A. It's unclear.</p>
+						
+						<ul>
+							<li class="fragment" data-fragment-index="3">Expect the more fundamental second-quantised model to be correct, <span class="fragment" data-fragment-index="4">but its "position operator" is non-Hermitian.</span></li>
+							<li class="fragment" data-fragment-index="5">Operators in Newton-Wigner representation agree with what we expect, <span class="fragment" data-fragment-index="6">but no Lorentz invariance for localisation and causality issues present.</span></li>
+							<li class="fragment" data-fragment-index="7">Is the Newton-Wigner representation the result of course-graining,<br /> <span class="fragment" data-fragment-index="8">or does it have a more fundamental status?</span></li>
+						</ul>
 					</section>
 				</section>
 				
 				<!-- Summary and outlook -->
 				<section data-background-gradient="linear-gradient(to bottom, #51247A, #1A1A1A)" data-transition="fade">
 					<section>
-					<h1>Summary</h1>
-					<ul>
-						<li>Obtained effects of localisation in UDW model / idealised atom-light interaction</li>
-						<li>Surprising disagreement between first- and second-quantised models!</li>
-						<li>In principle, discrepancy testable for atom-detectors with large mean momenta</li>
-					</ul>
+						<h1>Summary</h1>
+						<ul>
+							<li class="fragment">Localisation problem in UDW model / idealised atom-light interaction</li>
+							&nbsp;
+							<li class="fragment">Surprising disagreement between first- and second-quantised models!</li>
+							&nbsp;
+							<li class="fragment">Experimentally distinguishable for detectors boosted wrt lab frame</li>
+						</ul>
 					</section>
 					
-					<h1>Open Questions</h1>
-					<ul>
-						<li>What is the nature of the different localisation schemes?</li>
-						<li>How should we interpret the Foldy-Wouthuysen transformation and the different operator representations?</li>
-						<li>Would we observe new effects in a more realistic model, featuring a spin-$1/2$ atom-detector interacting with an electromagnetic field?</li>
-					</ul>
+					<!-- 
+					<section data-auto-animate>
+						<h1>Open Questions</h1>
+						<ul>
+							<li class="fragment">What is the nature of the different localisation schemes?</li>
+							&nbsp;
+							<li class="fragment">How should we interpret the FW transformation and the different operator representations?</li>
+							&nbsp;
+							<li class="fragment">What would one observe in a more realistic model, featuring a spin-$1/2$ atom-detector interacting with an electromagnetic field?</li>
+						</ul>
+					</section>
+					-->
+					
+					<section data-auto-animate>
+						<h1>Open Questions</h1>
+						<ul>
+							<li class="fragment" data-fragment-index="1">Q. What is a 'particle'?</li>
+							<li class="fragment" data-fragment-index="2">A. A 'particle' is what a 'particle detector' detects.</li>
+							&nbsp;
+							<li class="fragment" data-fragment-index="3">Q. What is a 'particle detector'?</li>
+							<li class="fragment" data-fragment-index="4">A. A 'particle detector' is a <i>localised</i> system, from which one may perform local operations on a quantum field.</li>
+							&nbsp;
+							<li class="fragment" data-fragment-index="5">Q. What is meant by a localised system? For a relativistic 'particle detector', how should one define its localisation?</li>
+							<li class="fragment" data-fragment-index="6">A. ...</li>
+						</ul>
 					</section>
 					
 					<section>
-					<h1>Thank you!</h1>
-					<footer><br />Evan Gale | e.gale@uq.edu.au</footer>
+						<h1 style="font-size: 112px;">Thank you!</h1>
+						<p style="font-size: 56px;"><br />Evan Gale | e.gale@uq.edu.au</p>
+						&nbsp;
+						<div class="r-hstack justify-center">
+							<img data-src="./figures/UQ_logo.png" height="100px">
+							&emsp;
+							<img data-src="./figures/equs_logo.png" height="100px">
+						</div>
+					</section>
 				</section>
 			</div>
 		</div>
