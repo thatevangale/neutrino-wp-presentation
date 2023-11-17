@@ -70,9 +70,11 @@
 						<h1>Unruh-DeWitt (UDW) detector model</h1>
 						<p>Originally proposed by Unruh [1], then simplified by DeWitt [2].</p>
 						<p>Couples a two-level system to a quantised scalar field $\hat{\phi}(\vec{x})$</p>
+						<div data-id="int">
 							\[
 								\hat{H}_I = \lambda \hat{\mu} \otimes \hat{\phi}(\vec{x})
 							\]
+						</div>
 						<p>Polarisation or 'monopole' operator exchanges energy levels</p> 
 							\[
 								\hat{\mu} = | g \rangle \langle e | + | e \rangle \langle g |
@@ -90,9 +92,11 @@
 						<h1>Unruh-DeWitt (UDW) detector model</h1>
 						<p>Originally proposed by Unruh [1], then simplified by DeWitt [2].</p>
 						<p>Couples a two-level system to a quantised scalar field $\hat{\phi}(\vec{x})$</p>
+						<div data-id="int">
 							\[
 								\hat{H}_I = \lambda \hat{\mu} \otimes \hat{\phi}(\vec{x})
 							\]
+						</div>
 						<p>Field can be decomposed as superposition of plane wave modes</p> 
 							\[
 								\hat{\phi}(\vec{x}) = \frac{1}{(2\pi)^{3/2}} \int \frac{d^3k}{\sqrt{2 \omega(\vec{k})}} \Big ( \hat{a}(\vec{k}) e^{-i \vec{k} \cdot \vec{x}} + \mathrm{H.c.} \Big )
@@ -227,7 +231,7 @@
 						<h1>Some caveats</h1>
 						<p>Q. Does detector does not remain localised? A. No. No confining potential!</p>
 						<ul>
-							<li>Detector spreads out, 'delocalises' or 'decoheres'</li>
+							<li>Detector spreads out or 'delocalises'</li>
 							&nbsp;
 							<li>Typically want detector confined to finite region [1, 3, 7]</li>
 							&nbsp;
@@ -336,18 +340,11 @@
 							\]
 						</div>
 						<p class="fragment" data-fragment-index="1">Different localisations are given by</p>
-						<div class="container">
-							<div class="fragment" data-fragment-index="1">
-							\[
-								\hspace{-5em} | \vec{x}_j \rangle_D^{(\mathrm{1st})} \equiv \frac{1}{(2\pi)^{3/2}} \int d^3p \, e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, ,
-							\]
-							</div>
-
-							<div class="fragment" data-fragment-index="2">
-							\[
-								\hspace{2em} | \vec{x}_j \rangle_D^{(\mathrm{2nd})} \equiv \frac{1}{(2\pi)^{3/2}} \int \frac{d^3p}{\sqrt{2 E_j(\vec{p})}} e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, .
-							\]
-							</div>
+						<div style="font-size: 28px;">
+						\[
+							| \vec{x}_j \rangle_D^{(\mathrm{1st})} \equiv \frac{1}{(2\pi)^{3/2}} \int d^3p \, e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, , \quad
+							| \vec{x}_j \rangle_D^{(\mathrm{2nd})} \equiv \frac{1}{(2\pi)^{3/2}} \int \frac{d^3p}{\sqrt{2 E_j(\vec{p})}} e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, .
+						\]
 						</div>
 					</section>
 				</section>
