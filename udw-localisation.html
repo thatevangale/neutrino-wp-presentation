@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Localisation problem for UDW detectors</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -20,16 +20,35 @@
 		.col{
 			flex: 1;
 		}
+		
+		a:link {
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:visited {
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:hover {
+			background-color: transparent;
+			text-decoration: underline;
+		}
+
+		a:active {
+			background-color: transparent;
+			text-decoration: underline;
+		}
 		</style>
 	</head>
+	
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<!-- Title -->
-				<section data-background-gradient="linear-gradient(to bottom, #51247A, #1A1A1A)" data-transition="fade" data-background-transition="zoom">
-					<a href="https://thatevangale.github.io/neutrino-wp-presentation/">
-						<h1 style="text-transform:uppercase;">Localisation problem in Unruh-DeWitt detectors with quantised centre of mass</h1>
-					</a>
+				<section data-background-gradient="linear-gradient(to bottom, #51247A, #000000)" data-transition="fade" data-background-transition="zoom">
+					<h1 style="text-transform:uppercase;">Localisation problem in Unruh-DeWitt detectors with quantised centre of mass</h1>
 					<h2><u>Evan Gale</u><sup>a</sup>, and Magdalena Zych<sup>a, b</sup></h2>
 					<footer style="font-size: 25px;">
 						<sup>a</sup>ARC Centre of Excellence for Engineered Quantum Systems, School of Mathematics and Physics,<br />
@@ -37,12 +56,18 @@
 						<sup>b</sup>Department of Physics, Stockholm University, SE-106 91 Stockholm, Sweden
 					</footer>
 					&nbsp;
-					<p>Physical Review D <b>107</b>, 056023 (2023)</p>
+					<a href="https://link.aps.org/doi/10.1103/PhysRevD.107.056023" target="_blank">
+						<p>Physical Review D <b>107</b>, 056023 (2023)</p>
+					</a>
 					&nbsp;
 					<div class="r-hstack justify-center">
-						<img data-src="./figures/UQ_logo.png" height="100px">
-						&emsp;
-						<img data-src="./figures/equs_logo.png" height="100px">
+						<a href="https://www.uq.edu.au/">
+							<img data-src="./figures/UQlogo-Reverse-rgb.png" height="100px">
+						</a>
+						&emsp;&emsp;
+						<a href="https://equs.org/">
+							<img data-src="./figures/equs_logo_inline_colour.png" height="100px">
+						</a>
 					</div>
 				</section>
 				
@@ -340,7 +365,7 @@
 							\]
 						</div>
 						<p class="fragment" data-fragment-index="1">Different localisations are given by</p>
-						<div style="font-size: 28px;">
+						<div  class="fragment" data-fragment-index="1" style="font-size: 28px;">
 						\[
 							| \vec{x}_j \rangle_D^{(\mathrm{1st})} \equiv \frac{1}{(2\pi)^{3/2}} \int d^3p \, e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, , \quad
 							| \vec{x}_j \rangle_D^{(\mathrm{2nd})} \equiv \frac{1}{(2\pi)^{3/2}} \int \frac{d^3p}{\sqrt{2 E_j(\vec{p})}} e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, .
@@ -623,7 +648,7 @@
 				</section>
 				
 				<!-- Summary and outlook -->
-				<section data-background-gradient="linear-gradient(to bottom, #51247A, #1A1A1A)" data-transition="fade">
+				<section data-background-gradient="linear-gradient(to bottom, #51247A, #000000)" data-transition="fade">
 					<section>
 						<h1>Summary</h1>
 						<ul>
@@ -664,12 +689,16 @@
 					
 					<section>
 						<h1 style="font-size: 112px;">Thank you!</h1>
-						<p style="font-size: 56px;"><br />Evan Gale | e.gale@uq.edu.au</p>
+						<p style="font-size: 42px;"><br />Evan Gale | e.gale@uq.edu.au</p>
 						&nbsp;
 						<div class="r-hstack justify-center">
-							<img data-src="./figures/UQ_logo.png" height="100px">
-							&emsp;
-							<img data-src="./figures/equs_logo.png" height="100px">
+							<a href="https://www.uq.edu.au/">
+								<img data-src="./figures/UQlogo-Reverse-rgb.png" height="75px">
+							</a>
+							&emsp;&emsp;
+							<a href="https://equs.org/">
+								<img data-src="./figures/equs_logo_inline_colour.png" height="75px">
+							</a>
 						</div>
 					</section>
 				</section>
