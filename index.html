@@ -85,7 +85,7 @@
 					</div>
 				</section>
 
-				<!-- preface -->
+				<!-- Preface -->
 				<section>
 					<h1>Some relevant questions:</h1>
 					<ul>
@@ -156,591 +156,136 @@
 					</div>
 					&nbsp;
 					<footer style="font-size: 25px;"><br />
-						[1] P. C. W. Davies, Particles Do Not Exist, in <em>Quantum Theory of Gravity: Essays in Honor of the 60th Birthday of Bryce C DeWitt</em>, edited by S. M. Christensen (Taylor & Francis, 1984), pp. 66–77.
+						[1] P. C. W. Davies, Particles Do Not Exist in <em>Quantum Theory of Gravity</em>, 1984.
 					</footer>
 				</section>
 
-				<!-- Relate to Rovelli notion of quantum state also as example? -->
-
-				<!-- However, this raises the question: what is a particle detector? How do we model a detector? -->
-
-				<!-- Begs the question. Detector assumed to follow classical trajectory in co-moving frame of observer. What would a relativistic detector detect? -->
-
-				<!-- How should we model a relativistic particle detector? Cannot have more than one particle (should be simple two leveled system). Choice of representation. Spectrum of Hamiltonian. -->
-
-				<!-- Give my previous results --- show depends on how the detector is modelled -->
-
-				<!-- NW detector is strictly localized. Local number operator. Unstable and not Lorentz invariant.
-				 Versus Lorentz-invariant localization scheme but without local number operator, unbounded Hamiltonian, and indefinite metric. -->
-
-				<!-- Two representations: canonical representation versus hyperbolic.
-				 1. Detector has unstable localisation, but positive definite inner product and Hamiltonian bounded from below
-				 2. Detector cannot be localised. No local number operator. Indefinite inner product. Hamiltonian unbounded.  -->
-
-				<!-- Conclusion + advertise preprint to be released by the end of the month -->
-				
-				<!-- extensions with c.m. -->
+				<!-- How do we model a relativistic detector? -->
 				<section>
-					<!-- non-relativistic extensions -->
-					<section data-auto-animate>
-						<h1>Detectors with quantised centre of mass</h1>
-						<div class="fragment" data-fragment-index="1">
-						<p>Considered by Unruh and Wald for a box detector [3]</p>
-							\[
-								\hat{H}_I = \lambda \int d^3x \, \hat{\mu}(\vec{x}) \otimes \hat{\phi}(\vec{x})
-							\]
-						</div>
-						<div class="fragment" data-fragment-index="2">
-						<p>with a position-dependent monopole operator of the form</p>
-							\[
-								\hat{\mu}(\vec{x}) \equiv \psi_g^*(\vec{x}) \psi_e(\vec{x}) | g \rangle \langle e | + \psi_e^*(\vec{x}) \psi_g(\vec{x}) | e \rangle \langle g |
-							\]
-						</div>
-						<footer class="fragment" data-fragment-index="1" style="font-size: 25px;"><br />
-							[3] W. G. Unruh and R. M. Wald, Phys. Rev. D <b>29</b>, 1047 (1984).
-						</footer>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Detectors with quantised centre of mass</h1>
-						<p data-auto-animate-delay="1">Alternative extension considered by Stritzelberger and Kempf [4]</p>
-						<div data-auto-animate-delay="1">
-							\[
-								\hat{H}_I = \lambda \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D \otimes \hat{\phi}(\vec{x})
-							\]
-						</div>
-						<div class="fragment">
-						<p>Detector's free Hamiltonian now includes a kinetic term</p>
-							\[
-								\hat{H}_D = \frac{\hat{\vec{p}}^2}{2 M} + E | e \rangle \langle e |
-							\]
-						</div>
-						<p class="fragment">Full atom-light interaction treated by Wilkens [5]</p>
-						<footer data-auto-animate-delay="1" style="font-size: 25px;"><br />
-							[4] N. Stritzelberger and A. Kempf, Phys. Rev. D <b>101</b>, 036007 (2020).
-							<br />
-							[5] M. Wilkens, Phys. Rev. A <b>47</b>, 671 (1993).
-						</footer>
-					</section>
-					
-					<!-- relativistic centre of mass? -->
-					<section data-auto-animate>
-						<h1>Relativistic centre of mass?</h1>
-						<p>Problem: both extensions assume a non-relativistic detector!</p>
-						<br />
-						<ul>
-							<li class="fragment">Model mixes Lorentz and Galilean groups</li>
-							&nbsp;
-							<li class="fragment">Leads to "spurious friction forces" acting on detector [5]</li>
-						</ul>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Relativistic centre of mass?</h1>
-						<p>Problem: both extensions assume a non-relativistic detector!</p>
-						<br />
-						<p class="fragment">Can introduce relativistic centre of mass in two different ways:</p>
-						<ul>
-							<li class="fragment">Second-quantised model&mdash;relativistic quantum field theory</li>
-							&nbsp;
-							<li class="fragment">First-quantised model&mdash;relativistic quantum mechanics</li>
-							<br />
-						</ul>
-						<p class="fragment">Let's consider both models, starting with second-quantised case</p>
-					</section>
-					
-					<!-- second-quantised model -->
-					<section data-auto-animate>
-						<h1>Relativistic second-quantised detector</h1>
-						<p class="fragment">Relativistic second-quantised detector model proposed by Unruh [1]</p>
-						<ul>
-							<div class="fragment">
-							<li>Replace energy levels of detector by fields $| j \rangle \to \hat{\psi}_j$</li>
-								\[
-									\hat{\mu}_\hat{\psi}(\vec{x}) = \hat{\psi}^\dagger_g(\vec{x}) \hat{\psi}_e(\vec{x}) + \hat{\psi}^\dagger_e(\vec{x}) \hat{\psi}_g(\vec{x})
-								\]
-							</div>
-							<div class="fragment">
-							<li>The interaction Hamiltonian takes the form</li>
-								\[
-									\hat{H}_I^{(\mathrm{2nd})} = \lambda^{(\mathrm{2nd})} \int d^3x \, \hat{\mu}_\hat{\psi}(\vec{x}) \otimes \hat{\phi}(\vec{x})
-								\]
-							</div>
-							<li class="fragment">Coupling constants between models are dimensionally distinct!</li>
-						</ul>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Relativistic second-quantised detector</h1>
-						<p data-auto-animate-delay="1">Giacomini and Kempf [6] simplified by restricting to one-particle sector</p>
-						<ul>
-							<div class="fragment">
-							<li>Interaction couples position and internal degrees of freedom</li>
-								\[
-									\hat{H}_I^{(\mathrm{2nd})} \Big |_{\mathcal{H}^D_1} = \lambda^{(\mathrm{2nd})} \int d^3x \, \Big( | \vec{x}_g \rangle \langle \vec{x}_e |_D^{(\mathrm{2nd})} + | \vec{x}_e \rangle \langle \vec{x}_g |_D^{(\mathrm{2nd})} \Big) \otimes \hat{\phi}(\vec{x})
-								\]
-							</div>
-							<div class="fragment">
-							<li>Looks similar to previous non-relativistic model, except that</li>
-								\[
-									| \vec{x}_j \rangle_D^{(\mathrm{2nd})} \equiv \frac{1}{(2\pi)^{3/2}} \int \frac{d^3p}{\sqrt{2 E_j(\vec{p})}} e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D
-								\]
-							</div>
-							<li class="fragment">Position states are not Fourier transforms of momentum eigenstates!</li>
-						</ul>
-						<footer data-auto-animate-delay="1" style="font-size: 25px;"><br />
-							[6] F. Giacomini and A. Kempf, Phys. Rev. D <b>105</b>, 125001 (2022).
-						</footer>
-					</section>
-					
-					<!-- caveats -->
-					<!-- <section data-auto-animate>
-						<h1>Some caveats</h1>
-						<p>Two detectors $\hat{\psi}_g$ and $\hat{\psi}_e$?</p>
-						<ul>
-							<li class="fragment">Detector Hilbert space given by $\mathcal{H}^D = \mathcal{H}_{g} \otimes \mathcal{H}_{e}$</li>
-							&nbsp;
-							<li class="fragment">Can refactor Hilbert space to separate centre of mass and internal degrees of freedom</li>
-							&nbsp;
-							<li class="fragment">Still interpret as single detector&mdash;effective description!</li>
-						</ul>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Some caveats</h1>
-						<p>Detector does not remain localised---no confining potential!</p>
-						<ul>
-							<li class="fragment" data-fragment-index="1">Detector spreads out or 'delocalises'</li>
-							&nbsp;
-							<li class="fragment" data-fragment-index="2">Want detector confined to finite region [1, 3, 7]</li>
-							&nbsp;
-							<li class="fragment" data-fragment-index="3">Can in principle synthesise models&mdash;localised detector with relativistic centre of mass</li>
-						</ul>
-						<footer class="fragment" data-fragment-index="2" style="font-size: 25px;"><br /><br />
-							[7] T. R. Perche, J. Polo-Gómez, B. de S. L. Torres, and E. Martín-Martínez, Phys. Rev. D <b>109</b>, 045013 (2024).
-						</footer>
-					</section> -->
-					
-					<!-- first-quantised model -->
-					<section data-auto-animate>
-						<h1>A relativistic first-quantised model?</h1>
-						<div class="fragment">
-						<p>Quantise the detector in a boosted frame with momentum $\vec{p}$</p>
-							\[
-								\hat{H}_D = \sqrt{\hat{\vec{p}}^2 + \hat{M}^2} \, .
-							\]
-						</div>
-						<div class="fragment">
-						<p>To describe internal energy, we must quantise the mass-energy</p>
-							\[
-								\hat{M} = M_g | g \rangle \langle g | + M_e | e \rangle \langle e | \, ,
-							\]
-						</div>
-						<div class="fragment">
-						<p>where</p>
-							\[
-								\hat{M} | j \rangle = M_j | j \rangle \, .
-							\]
-						</div>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>A relativistic first-quantised model?</h1>
-						<p>Interaction Hamiltonian should have the form</p>
-						<div data-id="hamiltonian">
-							\[
-								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D^{(\mathrm{1st})} \otimes \hat{\phi}(\vec{x}) \, .
-							\]
-						</div>
-						<p>This Hamiltonian coincides with the non-relativistic expression</p>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>A relativistic first-quantised model?</h1>
-						<p>Interaction Hamiltonian should have the form</p>
-						<div data-id="hamiltonian">
-							\[
-								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D^{(\mathrm{1st})} \otimes \hat{\phi}(\vec{x}) \, .
-							\]
-						</div>
-						<p data-auto-animate-delay="1">But we have to be a little careful!</p>
-						<ul data-auto-animate-delay="2">
-							<p>Q. What time parameter does the Hamiltonian generate time translations for? [8]</p>
-							<p>A. Inertial detector. Generate time translations wrt coordinate time $t$</p>
-						</ul>
-						<footer data-auto-animate-delay="2" style="font-size: 25px;"><br />
-							[8] E. Martín-Martínez and P. Rodriguez-Lopez, Phys. Rev. D <b>97</b>, 105026 (2018).
-						</footer>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>A relativistic first-quantised model?</h1>
-						<p>Interaction Hamiltonian should have the form</p>
-						<div data-id="hamiltonian">
-							\[
-								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D^{(\mathrm{1st})} \otimes \hat{\phi}(\vec{x}) \, .
-							\]
-						</div>
-						<p>But we have to be a little careful!</p>
-						<ul>
-							<p>Q. How do we define the position states $| \vec{x} \rangle_D^{(\mathrm{1st})}$?</p>
-							<p>A. Take states to be Fourier transform of momentum eigenstates</p>
-							\[
-								| \vec{x} \rangle_D^{(\mathrm{1st})} \equiv \frac{1}{(2\pi)^{3/2}} \int d^3p \, e^{-i \vec{p} \cdot \vec{x}} | \vec{p} \rangle_D \, .
-							\]
-						</ul>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>A relativistic first-quantised model?</h1>
-						<p>Interaction Hamiltonian should have the form</p>
-						<div data-id="hamiltonian">
-							\[
-								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \hat{\mu} \otimes | \vec{x} \rangle \langle \vec{x} |_D^{(\mathrm{1st})} \otimes \hat{\phi}(\vec{x}) \, .
-							\]
-						</div>
-						<p>But we have to be a little careful!</p>
-						<ul>
-							<p>Q. How are the coupling constants between models related?</p>
-							<p>A. Take couplings to coincide for detector at rest</p>
-							\[
-								\lambda^{\mathrm{(2nd)}} = \sqrt{2 (M_g^2 + M_e^2)} \, \lambda^{\mathrm{(1st)}} \, .
-							\]
-						</ul>
-					</section>
-					
-					<!-- summary -->
-					<section>
-						<h1>Summary</h1>
-						<p class="fragment" data-fragment-index="1">First-quantised model</p>
-						<div class="fragment" data-fragment-index="1">
-							\[
-								\hat{H}_I^{(\mathrm{1st})} = \lambda^{(\mathrm{1st})} \int d^3x \, \Big( | \vec{x}_g \rangle \langle \vec{x}_e |_D^{(\mathrm{1st})} + | \vec{x}_e \rangle \langle \vec{x}_g |_D^{(\mathrm{1st})} \Big) \otimes \hat{\phi}(\vec{x}) \, .
-							\]
-						</div>
-						<p class="fragment" data-fragment-index="2">Second-quantised model</p>
+					<h1>What would a relativistic detector see?</h1>
+					<p class="fragment" data-fragment-index="1">Can model it as a delocalised Klein-Gordon field</p>
+					<div class="fragment" data-fragment-index="1">
+						\[
+						\phi_j(x) = \frac{1}{(2\pi)^3} \int \frac{d^3\mathbf{p}}{\sqrt{2E_j(\mathbf{p})}} \left( a_j(\mathbf{p}) e^{-ip \cdot x} + a^\dagger_j(\mathbf{p}) e^{ip \cdot x} \right)
+						\]
+					</div>
+					<p class="fragment" data-fragment-index="2">or as a localised Newton-Wigner field [2]</p>
+					<div class="fragment" data-fragment-index="2">
+						\[
+						\varphi_j(x) = \frac{1}{(2\pi)^3} \int d^3\mathbf{p} \, a_j(\mathbf{p}) e^{-ip \cdot x}
+						\]
+					</div>
+					&nbsp;
+					<footer class="fragment" data-fragment-index="2" style="font-size: 25px;"><br />
+						[2] S. A. Fulling, Aspects of Quantum Field Theory in Curved Spacetime, 1989.
+					</footer>
+				</section>
+
+				<!-- Klein-Gordon field is Lorentz invariant and causal, but non-orthogonal position states, indefinite inner product and unbounded spectrum of Hamiltonian -->
+				<section>
+					<h1>Klein-Gordon detector?</h1>
+					<p class="fragment" data-fragment-index="1">Philips position state [3] given by</p>
+					<div class="fragment" data-fragment-index="1">
+						\[
+						\phi_j^\dagger(x) | 0 \rangle = \frac{1}{(2\pi)^3} \int \frac{d^3\mathbf{p}}{\sqrt{2E_j(\mathbf{p})}} e^{ip \cdot x} | \mathbf{p}, j \rangle
+						\]
+					</div>
+					<p><span class="fragment" data-fragment-index="2">Lorentz covariant and causal! </span><span class="fragment" data-fragment-index="3">But there are some problems...</span></p>
+					<ul>
+						<li class="fragment" data-fragment-index="4">Position states non-orthogonal</li>
+						<li class="fragment" data-fragment-index="5">Spectrum of Hamiltonian is unbounded</li>
+						<li class="fragment" data-fragment-index="6">Klein-Gordon inner product is indefinite</li>
+					</ul>
+					&nbsp;
+					<footer class="fragment" data-fragment-index="1" style="font-size: 25px;"><br />
+						[3] T. O. Philips, Phys. Rev. <b>136</b>, B893 (1964).
+					</footer>
+				</section>
+
+				<!-- Newton-WIgner field give us orthogonal position state, positive-definite inner product, Hamiltonian bounded from below -->
+				<section>
+					<h1>Newton-Wigner detector?</h1>
+					<p class="fragment" data-fragment-index="1">Newton-Wigner position state [4] given by</p>
+					<div class="fragment" data-fragment-index="1">
+						\[
+						\varphi_j^\dagger(x) | 0 \rangle = \frac{1}{(2\pi)^3} \int d^3\mathbf{p} \, e^{ip \cdot x} | \mathbf{p}, j \rangle \, .
+						\]
+					</div>
+					<p><span class="fragment" data-fragment-index="2">Not Lorentz covariant... </span><span class="fragment" data-fragment-index="3">but problems solved!</span></p>
+					<ul>
+						<li class="fragment" data-fragment-index="4">Position states are orthogonal</li>
+						<li class="fragment" data-fragment-index="5">Spectrum of Hamiltonian is bounded below</li>
+						<li class="fragment" data-fragment-index="6">Inner product is positive definite</li>
+					</ul>
+					&nbsp;
+					<footer class="fragment" data-fragment-index="1" style="font-size: 25px;"><br />
+						[4] T. D. Newton and E. P. Wigner, Rev. Mod. Phys. <b>21</b>, 400 (1949).
+					</footer>
+				</section>
+
+				<!-- Dual representations of the Poincare group -->
+				<section data-auto-animate>
+					<h1>Dual representations of the Poincaré group</h1>
+					<p class="fragment" data-fragment-index="1">Klein-Gordon detector solves hyperbolic wave equation</p>
+					<div class="fragment" data-fragment-index="1">
+						\[
+						(\Box + m^2) \phi(x) = 0 \, .
+						\]
+					</div>
+					&nbsp;
+					<p class="fragment" data-fragment-index="2">Newton-Wigner detector solves pseudodifferential wave equation</p>
+					<div class="fragment" data-fragment-index="2">
+						\[
+						i \partial_t \varphi_j(x) = \sqrt{-\nabla^2 + m_j^2} \, \varphi_j(x) \, ,
+						\]
+					</div>
+				</section>
+
+				<!-- Different representations predict different transition rates for the detector! -->
+				<section data-auto-animate>
+					<h1>...what does a particle detector detect?</h1>
+					<p class="fragment" data-fragment-index="1">Transition rate is dependent on localisation scheme! [5]</p>
+					<ul>
+						<li class="fragment" data-fragment-index="2">Klein-Gordon:</li>
 						<div class="fragment" data-fragment-index="2">
 							\[
-								\hat{H}_I^{(\mathrm{2nd})} \Big |_{\mathcal{H}^D_1} = \lambda^{(\mathrm{2nd})} \int d^3x \, \Big( | \vec{x}_g \rangle \langle \vec{x}_e |_D^{(\mathrm{2nd})} + | \vec{x}_e \rangle \langle \vec{x}_g |_D^{(\mathrm{2nd})} \Big) \otimes \hat{\phi}(\vec{x}) \, .
+							\dot{P}^{\mathrm{(KG)}}[\psi_i](\mathbf{p}) \propto \int d^3\mathbf{p} \, |\psi_i(\mathbf{p}; \mathbf{p}_0)|^2 \, \frac{1}{\sqrt{\mathbf{p}^2 + m_e^2}} \, .
 							\]
 						</div>
-						<p class="fragment" data-fragment-index="3">Different localisations are given by</p>
-						<div class="fragment" data-fragment-index="3" style="font-size: 28px;">
+						<li class="fragment" data-fragment-index="3">Newton-Wigner:</li>
+						<div class="fragment" data-fragment-index="3">
 							\[
-								| \vec{x}_j \rangle_D^{(\mathrm{1st})} \equiv \frac{1}{(2\pi)^{3/2}} \int d^3p \, e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, , \quad
-								| \vec{x}_j \rangle_D^{(\mathrm{2nd})} \equiv \frac{1}{(2\pi)^{3/2}} \int \frac{d^3p}{\sqrt{2 E_j(\vec{p})}} e^{-i \vec{p} \cdot \vec{x}} | \vec{p}, j \rangle_D \, .
+							\dot{P}^{\mathrm{(NW)}}[\psi_i](\mathbf{p}) \propto \int d^3\mathbf{p} \, |\psi_i(\mathbf{p}; \mathbf{p}_0)|^2 \, \sqrt{\mathbf{p}^2 + m_e^2} \, .
 							\]
 						</div>
-					</section>
-				</section>
-				
-				<!-- results of UDW model -->
-				<section>
-					<section data-auto-animate>
-						<h1>Transition rate for spontaneous emission</h1>
-						<ul>
-							<div class="fragment">
-							<li>We idealise the atom-light interaction, finding transition from</li>
-							\[
-								| \Psi_i \rangle = | \psi_i, e \rangle_D \otimes | 0 \rangle \, , \text{ with } \, | \psi_i \rangle = \int{d^3p \, \psi_i(\vec{p}; \vec{p}_0) | \vec{p}} \rangle \, ,
-							\]
-							</div>
-							<div class="fragment">
-							<p>to the final state via spontaneous emission of the atom-detector</p>
-							\[
-								| \Psi_f \rangle = | \vec{p}_f, g \rangle_D \otimes \hat{a}^\dagger(\vec{k}) | 0 \rangle \, .
-							\]
-							</div>
-							<li class="fragment">Interaction picture: evolution wrt free Hamiltonian $\hat{H}_D + \hat{H}_F$</li>
-							<div class="fragment">
-							<li>Weak coupling: find to first-order in perturbation theory</li>
-							\[
-								\hat{U}(t_f, \, t_i) = 1 - i \int_{t_i}^{t_f} dt \, \hat{H}_{I}(t) + \mathcal{O}(\lambda^2) \, .
-							\]
-							</div>
-						</ul>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Transition rate for spontaneous emission</h1>
-						<p>Transition amplitude and probability found from</p>
-						\[
-							\mathcal{A}_{| \vec{p}_i, e, 0 \rangle \to | \vec{p}_f, g, 1_{\vec{k}} \rangle} = \langle \Psi_f | \hat{U}(t_f, \, t_i) | \Psi_i \rangle \, , \\
-							P_{| \vec{p}_i, e, 0 \rangle \to | g \rangle} = \int d^3k \int d^3p_f \, \left| \mathcal{A}_{| \vec{p}_i, e, 0 \rangle \to | \vec{p}_f, g, 1_{\vec{k}} \rangle} \right|^2 \, .
-						\]
-						<p class="fragment" data-fragment-index="1">Transition rate given as a functional of the detector wave function (probability density function), convolved with a 'template function'</p>
-						<div class="fragment" data-fragment-index="1" data-id="template">
-							\[
-								\dot{P}[\psi_i] = \frac{\lambda^2}{2 \pi} \int d^3p \, |\psi_i(\vec{p}; \vec{p}_0)|^2 \, \mathcal{T}_{\mathrm{rel}}(\vec{p}) \, .
-							\]
-						</div>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Transition rate for spontaneous emission</h1>
-						<p>Transition rate given as a functional of the detector wave function (probability density function), convolved with a 'template function'</p>
-						<div data-id="template">
-							\[
-								\dot{P}[\psi_i] = \frac{\lambda^2}{2 \pi} \int d^3p \, |\psi_i(\vec{p}; \vec{p}_0)|^2 \, \mathcal{T}_{\mathrm{rel}}(\vec{p}) \, .
-							\]
-						</div>
-						<div class="container" data-auto-animate-delay="2">
-							<div class="col">
-							First-quantised model
-							\[
-								\hspace{-3em} \mathcal{T}_{\mathrm{rel}}^{\mathrm{(1st)}}(\vec{p}) = \frac{1}{4} \left( 1 - \frac{M_g^4}{M_e^4} \right) \sqrt{\vec{p}^2 + M_e^2} \, ,
-							\]
-							</div>
-
-							<div class="col">
-							Second-quantised model
-							\[
-								\hspace{1em} \mathcal{T}_{\mathrm{rel}}^{\mathrm{(2nd)}}(\vec{p}) = \frac{1}{4} \left( 1 - \frac{M_g^4}{M_e^4} \right) \frac{M_e^2}{\sqrt{\vec{p}^2 + M_e^2}} \, .
-							\]
-							</div>
-						</div>
-					</section>
-					
-					<!-- template function -->
-					<section data-auto-animate>
-						<h1>Template functions for different localisations</h1>
-						<img data-src="./figures/udw-localisation/template_comparison_vac_E0001.svg" style="width:100%">
-						<footer data-id="energy" style="font-size: 25px;">$E/m = 0.001$</footer>
-						<br />
-						<footer data-id="comment" style="font-size: 25px;">where $m$ is the rest mass, i.e. $M_g \equiv m$ and $M_e \equiv m + E$.</footer>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Template functions for different localisations</h1>
-						<img data-src="./figures/udw-localisation/template_comparison_vac_E0001_w-nonrel.svg" style="width:100%">
-						<footer data-id="energy" style="font-size: 25px;">$E/m = 0.001$</footer>
-						<br />
-						<footer data-id="comment" style="font-size: 25px;">where $m$ is the rest mass, i.e. $M_g \equiv m$ and $M_e \equiv m + E$.</footer>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Template functions for different localisations</h1>
-						<img data-src="./figures/udw-localisation/template_comparison_vac_E10_w-nonrel.svg" style="width:100%">
-						<footer data-id="energy" style="font-size: 25px;">$E/m = 10$</footer>
-						<br />
-						<footer data-id="comment" style="font-size: 25px;">where $m$ is the rest mass, i.e. $M_g \equiv m$ and $M_e \equiv m + E$.</footer>
-					</section>
-					
-					<!-- transition rate -->
-					<section data-auto-animate>
-						<h1>Transition rate for detector at rest</h1>
-						<p>Assume detector has Gaussian profile</p>
-						\[
-							\psi_i(\vec{p}; \vec{p}_D) = \left( \frac{L^2}{2 \pi} \right)^{3/4} \exp\left(-\frac{L^2}{4} |\vec{p} - \vec{p}_D|^2\right) \, .
-						\]
-						<div class="fragment">
-						<p>Can obtain analytic results for detector at rest $\vec{p}_D = \vec{0}$</p>
-						\[
-							\dot{P}_{\mathrm{rel.}}^{\mathrm{(1st)}}[\psi_i] \sim e^{\frac{L^2 M_e^2}{4}} K_1\left( \frac{L^2 M_e^2}{4} \right) \, , \quad
-							\dot{P}_{\mathrm{rel.}}^{\mathrm{(2nd)}}[\psi_i] \sim U\left( \frac{1}{2},0,\frac{L^2 M_e^2}{2} \right) \, .
-						\]
-						</div>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Transition rate for detector at rest</h1>
-						<img data-src="./figures/udw-localisation/transrate_comparison_vac_L10.svg" style="width:90%">
-						<footer data-id="width" style="font-size: 25px;">$L/\lambda_c = 10$</footer>
-						<br />
-						<footer data-id="comment" style="font-size: 25px;">where $\lambda_c \equiv m^{-1}$ is the Compton wavelength of the detector.</footer>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Transition rate for detector at rest</h1>
-						<img data-src="./figures/udw-localisation/transrate_comparison_vac_L01.svg" style="width:90%">
-						<footer data-id="width" style="font-size: 25px;">$L/\lambda_c = 0.1$</footer>
-						<br />
-						<footer data-id="comment" style="font-size: 25px;">where $\lambda_c \equiv m^{-1}$ is the Compton wavelength of the detector.</footer>
-					</section>
-					
-					<!-- outlook -->
-					<section>
-						<h1>Transition rate for highly localised detector</h1>
-						<ul>
-							<li class="fragment" data-fragment-index="1">Transition rate approximately given by template function</li>
-							&nbsp;
-							<img class="fragment" data-fragment-index="2" data-src="./figures/udw-localisation/template_comparison_vac_E0001.svg" style="width:70%; display:block; margin:auto">
-							&nbsp;
-							<li class="fragment" data-fragment-index="3">Q. What would one observe if this experiment were performed?</li>
-						</ul>
-					</section>
-				</section>
-				
-				<!-- localisation issue background -->
-				<section>
-					<section data-auto-animate>
-						<h1>Open Questions</h1>
-						<ul>
-							<li class="fragment" data-fragment-index="1">Q. What is a 'particle'?</li>
-							<li class="fragment" data-fragment-index="2">A. A 'particle' is what a 'particle detector' detects.</li>
-							&nbsp;
-							<li class="fragment" data-fragment-index="3">Q. What is a 'particle detector'?</li>
-							<li class="fragment" data-fragment-index="4">A. A 'particle detector' is a <i>localised</i> system with which one may perform local operations on a quantum field.</li>
-							&nbsp;
-							<li class="fragment" data-fragment-index="5">Q. What is meant by a 'localised system'? For a <em>relativistic</em> particle detector, how should one define its localisation?</li>
-							<li class="fragment" data-fragment-index="6">A. ...</li>
-						</ul>
-					</section>
-					
-					<!-- <section>
-						<h1>How should we interpret these results?</h1>
-						<ul>
-							<li class="fragment" data-fragment-index="1">Can we define a relativistic position operator as equivalent to the non-relativistic position operator?</li>
-							&nbsp;
-							<li class="fragment" data-fragment-index="2">For that matter, how does one define a relativistic centre of mass?</li>
-						</ul>
-					</section>
-					
-					<section>
-						<h1>Non-relativistic centre of mass (c.m.)</h1>
-						<p>Uniquely defined as the weighted average of the position vectors</p>
-						<div>
-							\[
-								\vec{x}_{\text{c.m.}} = \frac{1}{M} \sum_i m_i \vec{x}_i \, , \text{ where } M = \sum_i m_i \, .
-							\]
-						</div>
-						<p>Things become more complicated when our system is relativistic</p>
-					</section>
-					
-					<style>
-						ol.alphaList {list-style-type: lower-alpha;} 
-					</style>
-					
-					<section data-auto-animate>
-						<h1>Relativistic centre of mass (c.m.)</h1>
-						<p class="fragment"  data-fragment-index="1">First* investigated by Pryce [9]</p>
-						<p class="fragment">Proposed six possible definitions (a)-(f) of a relativistic centre of mass:</p>
-						
-						<ol class="alphaList">
-							<li class="fragment">In a Galilean frame, weight by rest masses.</li>
-							<li class="fragment">As above, but in rest frame, then transform by Lorentz group.</li>
-							<li class="fragment">Define wrt particular frame, weight by dynamical mass-energies.</li>
-							<li class="fragment">As above, but in rest frame, then transform by Lorentz group.</li>
-							<li class="fragment">Defined wrt coordinates with vanishing Poisson brackets.</li>
-							<li class="fragment">Trying to synthesise definitions (a) and (b).</li>
-						</ol>
-						
-						<footer data-id="ref" class="fragment" data-fragment-index="1" style="font-size: 25px;"><br />
-							[9] M. H. L. Pryce, Proc. R. Soc. A <b>195</b>, 62 (1948).
-						</footer>
-					</section>
-					
-					<section data-auto-animate>
-						<h1>Relativistic centre of mass (c.m.)</h1>
-						<p>First* investigated by Pryce [9]</p>
-						<p>Proposed six possible definitions (a)-(f) of a relativistic centre of mass:</p>
-						
-						<ol class="alphaList">
-							<li style="opacity: 0.25;">In a Galilean frame, weight by rest masses.</li>
-							<li style="opacity: 0.25;">As above, but in rest frame, then transform by Lorentz group.</li>
-							<li style="opacity: 0.5;">Define wrt particular frame, weight by dynamical mass-energies.</li>
-							<li>As above, but in rest frame, then transform by Lorentz group.</li>
-							<li>Defined wrt coordinates with vanishing Poisson brackets.</li>
-							<li style="opacity: 0.25;">Trying to synthesise definitions (a) and (b).</li>
-						</ol>
-						
-						<footer data-id="ref" style="font-size: 25px;"><br />
-							[9] M. H. L. Pryce, Proc. R. Soc. A <b>195</b>, 62 (1948).
-						</footer>
-					</section> -->
-					
-					<section>
-						<h1>How should we interpret these results?</h1>
-						<h2>Localisation in RQM I</h2>
-						<p class="fragment" data-fragment-index="1">Newton and Wigner [10] defined a relativistic position operator<br /> by requiring it satisfy a set of invariance conditions</p>
-						
-						<ol class="alphaList">
-							<li class="fragment" data-fragment-index="2">Superposition of localised systems is also localised.</li>
-							<li class="fragment" data-fragment-index="3">Invariant wrt spatial rotations and reflections.</li>
-							<li class="fragment" data-fragment-index="4">Localised states are orthogonal wrt translated states.</li>
-							<li class="fragment" data-fragment-index="5">Generators of Lorentz group applicable to the localised states.</li>
-							&nbsp;
-						</ol>
-						
-						<p class="fragment" data-fragment-index="6">Coincides with the non-relativistic position operator [11]</p>
-						
-						<footer data-id="ref" style="font-size: 25px;"><br />
-							<span  class="fragment" data-fragment-index="1">[10] T. D. Newton and E. P. Wigner, Rev. Mod. Phys. <b>21</b>, 400 (1949).</span>
-							<br />
-							<span  class="fragment" data-fragment-index="6">[11] R. Fong and E. G. P. Rowe, Ann. Phys. <b>46</b>, 559 (1968).</span>
-						</footer>
-					</section>
-					
-					<section>
-						<h1>How should we interpret these results?</h1>
-						<h2>Localisation in RQM II</h2>
-						<p class="fragment" data-fragment-index="1">Philips [12] defined a Lorentz-invariant position operator</p>
-						<ol class="alphaList">
-							<li class="fragment" data-fragment-index="2">Superposition of localised systems is also localised.</li>
-							<li class="fragment" data-fragment-index="3">Invariant wrt spatial rotations and reflections.</li>
-							<li class="fragment" data-fragment-index="4">Localised states are invariant wrt Lorentz boosts.</li>
-							<li class="fragment" data-fragment-index="5">The localised states are normalisable.</li>
-							<li class="fragment" data-fragment-index="6">No subset of the set of localised states satisfies the above conditions.</li>
-							&nbsp;
-						</ol>
-						
-						<p class="fragment" data-fragment-index="7">In second-quantised formalism,
-							Philips' position state is equivalent to the action of field operator on vacuum
-							$| \vec{x}_p \rangle \equiv \hat{\psi}(\vec{x}) | 0 \rangle$</p>
-						
-						<footer class="fragment" data-fragment-index="1" data-id="ref" style="font-size: 25px;"><br />
-							[12] T. O. Philips, Phys. Rev. <b>136</b>, B893 (1964).
-						</footer>
-					</section>
-
-					<section>
-						<h1>How should we interpret these results?</h1>
-						<h2>Localisation in RQM III</h2>
-						
-						<p>Localisation schemes <em>not</em> first- versus second-quantised. <br />
-							Correspond to different representations with associated wave equations</p>
-
-						<ul><li>Newton-Wigner: relativistic Schrödinger equation</li></ul>
-
-						<span>$$i \partial_t \psi_{\text{NW}}(x) = \sqrt{-\nabla^2 + m^2} \psi_{\text{NW}}(x) $$</span>
-
-						<ul><li>Philips: Klein-Gordon equation (spin-0)</li></ul>
-
-						<span>$$\left( \square + m^2 \right) \psi(x) = 0 $$</span>
-
-					</section>
+					</ul>
+					&nbsp;
+					<footer class="fragment" data-fragment-index="1" style="font-size: 25px;"><br />
+						[5] E. P. G. Gale and M. Zych, Phys. Rev. D <b>107</b>, 056023 (2023).
+					</footer>
 				</section>
 
-				<!-- TODO: State Hegerfeldt's and Malament's theorem here -->
-				
-				<!-- Relevance of FW transformation and discussion -->
 				<section>
-					<!-- <section data-auto-animate>
-						<h1>Two sides to relativistic localisation</h1>
-						<p>Q. How are these two localisations related?</p>
-						<p>A. One can map between these two different localisations, and associated representations, via the Foldy-Wouthuysen transformation [13-15]</p>
-						
-						<footer data-id="ref" style="font-size: 25px;"><br />
-							[13] L. L. Foldy and S. A. Wouthuysen, Phys. Rev. <b>78</b>, 29 (1950).
-							<br />
-							[14] L. L. Foldy, Phys. Rev. <b>102</b>, 568 (1956).
-							<br />
-							[15] J. P. Costella and B. H. J. McKellar, Am. J. Phys. <b>63</b>, 1119 (1995).
-						</footer>
-					</section> -->
-				
-					<section data-auto-animate>
-						<h1>Two sides to relativistic localisation</h1>
+					<h1>Can we have localised particle detectors?</h1>
+					<p class="fragment">Take detector initially localised on a Cauchy surface</p>
+					<img class="fragment" data-src="./figures/dual-rep/loc_detector_init.svg" style="width: 500px; margin-top: -100px;">
+					<p class="fragment">Cannot strictly localise with Klein-Gordon detector!</p>
+				</section>
 
-						<p class="fragment" data-fragment-index="1">Q. How should we interpret the results of these two localisations?</p>
-						<p class="fragment" data-fragment-index="2">A. It's unclear.</p>
-						
-						<ul>
-							<li class="fragment" data-fragment-index="3">Expect the more fundamental second-quantised model to be correct, <span class="fragment" data-fragment-index="4">but its "position operator" is non-Hermitian.</span></li>
-							<li class="fragment" data-fragment-index="5">Operators in Newton-Wigner representation agree with what we expect, <span class="fragment" data-fragment-index="6">but no Lorentz invariance for localisation and causality issues present.</span></li>
-							<li class="fragment" data-fragment-index="7">Is the Newton-Wigner representation the result of course-graining,<br /> <span class="fragment" data-fragment-index="8">or does it have a more fundamental status?</span></li>
-						</ul>
-					</section>
+				<section>
+					<h1>Can we have localised particle detectors?</h1>
+					<p class="fragment" data-fragment-index="1">By Hegerfeldt's theorem [6], detector immediately delocalises!</p>
+					<img class="fragment" data-fragment-index="2" data-src="./figures/dual-rep/deloc_detector.svg" style="width: 500px; margin-top: -100px;">
+					<footer class="fragment" data-fragment-index="1" style="font-size: 25px;"><br />
+						[6] G. C. Hegerfeldt, Ann. Phys. <b>7</b>, 716 (1998).
+					</footer>
+				</section>
+
+				<section>
+					<h1>Can we have localised particle detectors?</h1>
+					<p class="fragment">Must <em>interweave</em> representations $\varphi \to \phi \to \varphi$ to ensure localization</p>
+					<img class="fragment" data-src="./figures/dual-rep/loc_detector.svg" style="width: 500px; margin-top: -100px;">
+					<p class="fragment">Klein-Gordon representation preserves causality between hypersurfaces</p>
 				</section>
 				
 				<!-- Summary and outlook -->
@@ -748,26 +293,25 @@
 					<section>
 						<h1>Summary</h1>
 						<ul>
-							<li class="fragment">Localisation problem in UDW model / idealised atom-light interaction</li>
+							<li class="fragment" data-fragment-index="1">Dual representations of the Poincaré group with differing spectrum</li>
+							&nbsp;	
+							<li class="fragment" data-fragment-index="2">Newton-Wigner representation:
+							  <ul>
+								<li class="fragment" data-fragment-index="2">localised</li>
+								<li class="fragment" data-fragment-index="2">Hermitian $\hat{x}$</li>
+								<li class="fragment" data-fragment-index="2">positive-definite inner product</li>
+							  </ul>
+							</li>
 							&nbsp;
-							<li class="fragment">Surprising disagreement between first- and second-quantised models!</li>
-							&nbsp;
-							<li class="fragment">Experimentally distinguishable for detectors boosted wrt lab frame</li>
-						</ul>
+							<li class="fragment" data-fragment-index="3">Klein-Gordon representation:
+							  <ul>
+								<li class="fragment" data-fragment-index="3">causal</li>
+								<li class="fragment" data-fragment-index="3">non-Hermitian $\hat{x}$</li>
+								<li class="fragment" data-fragment-index="3">indefinite inner product</li>
+							  </ul>
+							</li>
+						  </ul>
 					</section>
-					
-					<!-- 
-					<section data-auto-animate>
-						<h1>Open Questions</h1>
-						<ul>
-							<li class="fragment">What is the nature of the different localisation schemes?</li>
-							&nbsp;
-							<li class="fragment">How should we interpret the FW transformation and the different operator representations?</li>
-							&nbsp;
-							<li class="fragment">What would one observe in a more realistic model, featuring a spin-$1/2$ atom-detector interacting with an electromagnetic field?</li>
-						</ul>
-					</section>
-					-->
 					
 					<section>
 						<h1 style="font-size: 112px;">Thank you!</h1>
